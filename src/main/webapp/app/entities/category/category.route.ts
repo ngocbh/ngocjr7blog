@@ -11,7 +11,7 @@ export const categoryRoute: Routes = [
         path: 'category',
         component: CategoryComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: [],
             pageTitle: 'ngocjr7BlogApp.category.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -19,7 +19,7 @@ export const categoryRoute: Routes = [
         path: 'category/:id',
         component: CategoryDetailComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: [],
             pageTitle: 'ngocjr7BlogApp.category.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -31,7 +31,7 @@ export const categoryPopupRoute: Routes = [
         path: 'category-new',
         component: CategoryPopupComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_ADMIN'],
             pageTitle: 'ngocjr7BlogApp.category.home.title'
         },
         canActivate: [UserRouteAccessService],
@@ -41,7 +41,7 @@ export const categoryPopupRoute: Routes = [
         path: 'category/:id/edit',
         component: CategoryPopupComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_ADMIN'],
             pageTitle: 'ngocjr7BlogApp.category.home.title'
         },
         canActivate: [UserRouteAccessService],
@@ -51,7 +51,7 @@ export const categoryPopupRoute: Routes = [
         path: 'category/:id/delete',
         component: CategoryDeletePopupComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_ADMIN'],
             pageTitle: 'ngocjr7BlogApp.category.home.title'
         },
         canActivate: [UserRouteAccessService],

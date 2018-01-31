@@ -40,7 +40,8 @@
             [routerLink]="['/', { outlets: { popup: 'post/'+ post.id + '/edit'} }]"
             replaceUrl="true"
             queryParamsHandling="merge"
-            class="btn btn-primary">
+            class="btn btn-primary"
+            *jhiHasAnyAuthority="'ROLE_ADMIN'">
         <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
     </button>
 </div>

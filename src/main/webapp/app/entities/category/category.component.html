@@ -1,7 +1,9 @@
 <div>
     <h2>
         <span jhiTranslate="ngocjr7BlogApp.category.home.title">Categories</span>
-        <button class="btn btn-primary float-right jh-create-entity create-category" [routerLink]="['/', { outlets: { popup: ['category-new'] } }]">
+        <button class="btn btn-primary float-right jh-create-entity create-category"
+                [routerLink]="['/', { outlets: { popup: ['category-new'] } }]"
+                *jhiHasAnyAuthority="'ROLE_ADMIN'">
             <span class="fa fa-plus"></span>
             <span  jhiTranslate="ngocjr7BlogApp.category.home.createLabel">
             Create new Category
@@ -37,7 +39,8 @@
                                 [routerLink]="['/', { outlets: { popup: 'category/'+ category.id + '/edit'} }]"
                                 replaceUrl="true"
                                 queryParamsHandling="merge"
-                                class="btn btn-primary btn-sm">
+                                class="btn btn-primary btn-sm"
+                                *jhiHasAnyAuthority="'ROLE_ADMIN'">
                             <span class="fa fa-pencil"></span>
                             <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
                         </button>
@@ -45,7 +48,8 @@
                                 [routerLink]="['/', { outlets: { popup: 'category/'+ category.id + '/delete'} }]"
                                 replaceUrl="true"
                                 queryParamsHandling="merge"
-                                class="btn btn-danger btn-sm">
+                                class="btn btn-danger btn-sm"
+                                *jhiHasAnyAuthority="'ROLE_ADMIN'">
                             <span class="fa fa-remove"></span>
                             <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
                         </button>

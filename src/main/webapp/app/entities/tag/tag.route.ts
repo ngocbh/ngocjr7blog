@@ -11,7 +11,7 @@ export const tagRoute: Routes = [
         path: 'tag',
         component: TagComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: [],
             pageTitle: 'ngocjr7BlogApp.tag.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -19,7 +19,7 @@ export const tagRoute: Routes = [
         path: 'tag/:id',
         component: TagDetailComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: [],
             pageTitle: 'ngocjr7BlogApp.tag.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -31,7 +31,7 @@ export const tagPopupRoute: Routes = [
         path: 'tag-new',
         component: TagPopupComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_ADMIN'],
             pageTitle: 'ngocjr7BlogApp.tag.home.title'
         },
         canActivate: [UserRouteAccessService],
@@ -41,7 +41,7 @@ export const tagPopupRoute: Routes = [
         path: 'tag/:id/edit',
         component: TagPopupComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_ADMIN'],
             pageTitle: 'ngocjr7BlogApp.tag.home.title'
         },
         canActivate: [UserRouteAccessService],
@@ -51,7 +51,7 @@ export const tagPopupRoute: Routes = [
         path: 'tag/:id/delete',
         component: TagDeletePopupComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_ADMIN'],
             pageTitle: 'ngocjr7BlogApp.tag.home.title'
         },
         canActivate: [UserRouteAccessService],
