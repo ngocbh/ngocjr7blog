@@ -25,7 +25,11 @@ const ENTITY_STATES = [
     imports: [
         Ngocjr7BlogSharedModule,
         Ngocjr7BlogAdminModule,
-        RouterModule.forChild(ENTITY_STATES)
+        RouterModule.forChild(ENTITY_STATES),
+        RouterModule.forRoot(ENTITY_STATES, { useHash: true }),
+    ],
+    exports: [
+        CommentComponent,
     ],
     declarations: [
         CommentComponent,

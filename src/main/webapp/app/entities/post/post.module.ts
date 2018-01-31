@@ -14,6 +14,7 @@ import {
     postRoute,
     postPopupRoute,
 } from './';
+import {Ngocjr7BlogCommentModule} from '../comment/comment.module';
 
 const ENTITY_STATES = [
     ...postRoute,
@@ -23,7 +24,9 @@ const ENTITY_STATES = [
 @NgModule({
     imports: [
         Ngocjr7BlogSharedModule,
-        RouterModule.forChild(ENTITY_STATES)
+        Ngocjr7BlogCommentModule,
+        RouterModule.forChild(ENTITY_STATES),
+        RouterModule.forRoot(ENTITY_STATES, { useHash: true })
     ],
     declarations: [
         PostComponent,

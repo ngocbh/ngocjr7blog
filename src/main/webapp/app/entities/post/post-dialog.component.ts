@@ -12,6 +12,7 @@ import { PostService } from './post.service';
 import { Category, CategoryService } from '../category';
 import { Tag, TagService } from '../tag';
 import { ResponseWrapper } from '../../shared';
+import {DatePipe} from '@angular/common';
 
 @Component({
     selector: 'jhi-post-dialog',
@@ -28,6 +29,7 @@ export class PostDialogComponent implements OnInit {
 
     constructor(
         public activeModal: NgbActiveModal,
+        private datePipe: DatePipe,
         private jhiAlertService: JhiAlertService,
         private postService: PostService,
         private categoryService: CategoryService,
@@ -50,6 +52,7 @@ export class PostDialogComponent implements OnInit {
 
     save() {
         this.isSaving = true;
+        this.post.date = this.datePipe.transform(new Date(), 'yyyy-MM-ddTHH:mm:ss')
         if (this.post.id !== undefined) {
             this.subscribeToSaveResponse(
                 this.postService.update(this.post));
