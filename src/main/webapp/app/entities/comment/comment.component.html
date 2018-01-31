@@ -1,9 +1,11 @@
 <div>
     <h2>
         <span jhiTranslate="ngocjr7BlogApp.comment.home.title">Comments</span>
-        <button class="btn btn-primary float-right jh-create-entity create-comment" [routerLink]="['/', { outlets: { popup: ['comment-new'] } }]">
+        <button class="btn btn-primary float-right jh-create-entity create-comment"
+                [routerLink]="['/', { outlets: { popup: ['comment-new'] } }]"
+                *jhiHasAnyAuthority="'ROLE_USER'">
             <span class="fa fa-plus"></span>
-            <span  jhiTranslate="ngocjr7BlogApp.comment.home.createLabel">
+            <span>
             Create new Comment
             </span>
         </button>
@@ -55,7 +57,8 @@
                                 [routerLink]="['/', { outlets: { popup: 'comment/'+ comment.id + '/edit'} }]"
                                 replaceUrl="true"
                                 queryParamsHandling="merge"
-                                class="btn btn-primary btn-sm">
+                                class="btn btn-primary btn-sm"
+                                *jhiHasAnyAuthority="'ROLE_USER'">
                             <span class="fa fa-pencil"></span>
                             <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
                         </button>
@@ -63,7 +66,8 @@
                                 [routerLink]="['/', { outlets: { popup: 'comment/'+ comment.id + '/delete'} }]"
                                 replaceUrl="true"
                                 queryParamsHandling="merge"
-                                class="btn btn-danger btn-sm">
+                                class="btn btn-danger btn-sm"
+                                *jhiHasAnyAuthority="'ROLE_USER'">
                             <span class="fa fa-remove"></span>
                             <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
                         </button>

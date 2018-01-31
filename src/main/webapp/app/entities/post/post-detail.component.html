@@ -1,33 +1,43 @@
 
 <div *ngIf="post">
-    <h2><span jhiTranslate="ngocjr7BlogApp.post.detail.title">Post</span> {{post.id}}</h2>
+    <h2>{{post.title}}</h2>
+    <dd>
+        <span>Post on {{post.date | date:'medium'}} by ngocjr7</span>
+    </dd>
     <hr>
     <jhi-alert-error></jhi-alert-error>
     <dl class="row-md jh-entity-details">
-        <dt><span jhiTranslate="ngocjr7BlogApp.post.title">Title</span></dt>
-        <dd>
-            <span>{{post.title}}</span>
-        </dd>
-        <dt><span jhiTranslate="ngocjr7BlogApp.post.content">Content</span></dt>
         <dd>
             <span>{{post.content}}</span>
         </dd>
-        <dt><span jhiTranslate="ngocjr7BlogApp.post.date">Date</span></dt>
-        <dd>
-            <span>{{post.date | date:'medium'}}</span>
-        </dd>
-        <dt><span jhiTranslate="ngocjr7BlogApp.post.category">Category</span></dt>
-        <dd>
-            <div *ngIf="post.category">
-                <a [routerLink]="['/category', post.category?.id]">{{post.category?.name}}</a>
-            </div>
-        </dd>
-        <dt><span jhiTranslate="ngocjr7BlogApp.post.tag">Tag</span></dt>
-        <dd>
+
+        <table>
+            <tr>
+                <td>
+                    <dt><span jhiTranslate="ngocjr7BlogApp.post.category">Category</span></dt>
+                </td>
+                <td>
+                    <dt><span jhiTranslate="ngocjr7BlogApp.post.tag">Tag</span></dt>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <dd>
+                        <div *ngIf="post.category">
+                            <a [routerLink]="['/category', post.category?.id]">{{post.category?.name}}</a>
+                        </div>
+                    </dd>
+                </td>
+                <td>
+                    <dd>
             <span *ngFor="let tag of post.tags; let last = last">
                 <a [routerLink]="['/tag', tag?.id ]">{{tag.name}}</a>{{last ? '' : ', '}}
             </span>
-        </dd>
+                    </dd>
+                </td>
+            </tr>
+
+        </table>
     </dl>
 
     <button type="submit"
@@ -47,5 +57,5 @@
 
 
     <br>
-    <jhi-comment>Comment</jhi-comment>
+    <jhi-comment [post]='post'>Comment</jhi-comment>
 </div>

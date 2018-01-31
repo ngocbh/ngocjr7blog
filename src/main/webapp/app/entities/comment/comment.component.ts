@@ -5,13 +5,16 @@ import { JhiEventManager, JhiAlertService } from 'ng-jhipster';
 import { Comment } from './comment.model';
 import { CommentService } from './comment.service';
 import { Principal, ResponseWrapper } from '../../shared';
+import {Post} from '../post';
+import {Input} from '@angular/core';
 
 @Component({
     selector: 'jhi-comment',
     templateUrl: './comment.component.html'
 })
 export class CommentComponent implements OnInit, OnDestroy {
-comments: Comment[];
+    @Input('post') post: Post;
+    comments: Comment[];
     currentAccount: any;
     eventSubscriber: Subscription;
 
@@ -31,8 +34,18 @@ comments: Comment[];
             (res: ResponseWrapper) => this.onError(res.json)
         );
     }
+
+    loadAllByPostId(id) {
+        this.commentService.queryByStoryId(id).subscribe(
+            (res: ResponseWrapper) => {
+                this.comments = res.json;
+            },
+            (res: ResponseWrapper) => this.onError(res.json)
+        );
+    }
+
     ngOnInit() {
-        this.loadAll();
+        this.loadAllByPostId(this.post.id);
         this.principal.identity().then((account) => {
             this.currentAccount = account;
         });
@@ -51,6 +64,8 @@ comments: Comment[];
     }
 
     private onError(error) {
+        console.log('olala');
+        console.log(error);
         this.jhiAlertService.error(error.message, null, null);
     }
 }

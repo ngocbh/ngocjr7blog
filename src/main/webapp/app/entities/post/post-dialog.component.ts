@@ -3,7 +3,6 @@ import { ActivatedRoute } from '@angular/router';
 import { Response } from '@angular/http';
 
 import { Observable } from 'rxjs/Observable';
-import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { JhiEventManager, JhiAlertService } from 'ng-jhipster';
 
 import { Post } from './post.model';
@@ -20,7 +19,7 @@ import {DatePipe} from '@angular/common';
 })
 export class PostDialogComponent implements OnInit {
 
-    post: Post;
+    post: Post = new Post();
     isSaving: boolean;
 
     categories: Category[];
@@ -28,7 +27,6 @@ export class PostDialogComponent implements OnInit {
     tags: Tag[];
 
     constructor(
-        public activeModal: NgbActiveModal,
         private datePipe: DatePipe,
         private jhiAlertService: JhiAlertService,
         private postService: PostService,
@@ -47,7 +45,7 @@ export class PostDialogComponent implements OnInit {
     }
 
     clear() {
-        this.activeModal.dismiss('cancel');
+        window.history.back();
     }
 
     save() {
@@ -70,7 +68,7 @@ export class PostDialogComponent implements OnInit {
     private onSaveSuccess(result: Post) {
         this.eventManager.broadcast({ name: 'postListModification', content: 'OK'});
         this.isSaving = false;
-        this.activeModal.dismiss(result);
+        window.history.back();
     }
 
     private onSaveError() {

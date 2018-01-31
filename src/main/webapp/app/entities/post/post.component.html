@@ -2,7 +2,7 @@
     <h2>
         <span jhiTranslate="ngocjr7BlogApp.post.home.title">Posts</span>
         <button class="btn btn-primary float-right jh-create-entity create-post"
-                [routerLink]="['/', { outlets: { popup: ['post-new'] } }]"
+                [routerLink]="['../post-new']"
                 *jhiHasAnyAuthority="'ROLE_ADMIN'">
             <span class="fa fa-plus"></span>
             <span  jhiTranslate="ngocjr7BlogApp.post.home.createLabel">
@@ -22,7 +22,7 @@
                 <div [innerHTML]="post.content"></div>
                 <div class="btn-group mb-2 mt-1">
                     <button type="submit"
-                            [routerLink]="['/', { outlets: { popup: 'post/'+ post.id + '/edit'} }]"
+                            [routerLink]="['../post/'+post.id+'/edit']"
                             replaceUrl="true"
                             class="btn btn-primary btn-sm"
                             *jhiHasAnyAuthority="'ROLE_ADMIN'">

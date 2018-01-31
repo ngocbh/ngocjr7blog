@@ -42,6 +42,13 @@ export class CommentService {
             .map((res: Response) => this.convertResponse(res));
     }
 
+    queryByStoryId(id: number, req?: any): Observable<ResponseWrapper> {
+        return this.http.get(`${this.resourceUrl}/${id}`).map((res: Response) => {
+            const jsonResponse = res;
+            return this.convertResponse(jsonResponse);
+        });
+    }
+
     delete(id: number): Observable<Response> {
         return this.http.delete(`${this.resourceUrl}/${id}`);
     }
