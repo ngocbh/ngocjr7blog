@@ -1,0 +1,46 @@
+
+<div *ngIf="comment">
+    <h2><span jhiTranslate="ngocjr7BlogApp.comment.detail.title">Comment</span> {{comment.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="ngocjr7BlogApp.comment.content">Content</span></dt>
+        <dd>
+            <span>{{comment.content}}</span>
+        </dd>
+        <dt><span jhiTranslate="ngocjr7BlogApp.comment.vote">Vote</span></dt>
+        <dd>
+            <span>{{comment.vote}}</span>
+        </dd>
+        <dt><span jhiTranslate="ngocjr7BlogApp.comment.user">User</span></dt>
+        <dd>
+            {{comment.user?.login}}
+        </dd>
+        <dt><span jhiTranslate="ngocjr7BlogApp.comment.post">Post</span></dt>
+        <dd>
+            <div *ngIf="comment.post">
+                <a [routerLink]="['/post', comment.post?.id]">{{comment.post?.id}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="ngocjr7BlogApp.comment.pcomment">Pcomment</span></dt>
+        <dd>
+            <div *ngIf="comment.pcomment">
+                <a [routerLink]="['/comment', comment.pcomment?.id]">{{comment.pcomment?.id}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'comment/'+ comment.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,22 @@
+{
+    "ngocjr7BlogApp": {
+        "tag" : {
+            "home": {
+                "title": "Tags",
+                "createLabel": "Thêm mới một Tag",
+                "createOrEditLabel": "Thêm mới hoặc cập nhật Tag"
+            },
+            "created": "Một Tag mới được tạo với định danh {{ param }}",
+            "updated": "Một Tag cập nhật với định danh {{ param }}",
+            "deleted": "Một Tag đã xóa với định danh {{ param }}",
+            "delete": {
+                "question": "Bạn có chắc là muốn xóa Tag {{ id }}?"
+            },
+            "detail": {
+                "title": "Tag"
+            },
+            "name": "Name",
+            "post": "Post"
+        }
+    }
+}

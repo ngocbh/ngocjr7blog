@@ -1,0 +1,26 @@
+{
+    "ngocjr7BlogApp": {
+        "post" : {
+            "home": {
+                "title": "Posts",
+                "createLabel": "Thêm mới một Post",
+                "createOrEditLabel": "Thêm mới hoặc cập nhật Post"
+            },
+            "created": "Một Post mới được tạo với định danh {{ param }}",
+            "updated": "Một Post cập nhật với định danh {{ param }}",
+            "deleted": "Một Post đã xóa với định danh {{ param }}",
+            "delete": {
+                "question": "Bạn có chắc là muốn xóa Post {{ id }}?"
+            },
+            "detail": {
+                "title": "Post"
+            },
+            "title": "Title",
+            "content": "Content",
+            "date": "Date",
+            "category": "Category",
+            "tag": "Tag",
+            "comment": "Comment"
+        }
+    }
+}

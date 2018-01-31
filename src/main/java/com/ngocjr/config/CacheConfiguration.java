@@ -42,6 +42,15 @@ public class CacheConfiguration {
             cm.createCache(com.ngocjr.domain.User.class.getName(), jcacheConfiguration);
             cm.createCache(com.ngocjr.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(com.ngocjr.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            cm.createCache(com.ngocjr.domain.Category.class.getName(), jcacheConfiguration);
+            cm.createCache(com.ngocjr.domain.Category.class.getName() + ".posts", jcacheConfiguration);
+            cm.createCache(com.ngocjr.domain.Post.class.getName(), jcacheConfiguration);
+            cm.createCache(com.ngocjr.domain.Post.class.getName() + ".tags", jcacheConfiguration);
+            cm.createCache(com.ngocjr.domain.Post.class.getName() + ".comments", jcacheConfiguration);
+            cm.createCache(com.ngocjr.domain.Tag.class.getName(), jcacheConfiguration);
+            cm.createCache(com.ngocjr.domain.Tag.class.getName() + ".posts", jcacheConfiguration);
+            cm.createCache(com.ngocjr.domain.Comment.class.getName(), jcacheConfiguration);
+            cm.createCache(com.ngocjr.domain.Comment.class.getName() + ".replies", jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

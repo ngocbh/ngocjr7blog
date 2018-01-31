@@ -1,0 +1,68 @@
+<div>
+    <h2>
+        <span jhiTranslate="ngocjr7BlogApp.post.home.title">Posts</span>
+        <button class="btn btn-primary float-right jh-create-entity create-post" [routerLink]="['/', { outlets: { popup: ['post-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="ngocjr7BlogApp.post.home.createLabel">
+            Create new Post
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="posts">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="reset.bind(this)">
+            <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="title"><span jhiTranslate="ngocjr7BlogApp.post.title">Title</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="content"><span jhiTranslate="ngocjr7BlogApp.post.content">Content</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="date"><span jhiTranslate="ngocjr7BlogApp.post.date">Date</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="category.name"><span jhiTranslate="ngocjr7BlogApp.post.category">Category</span> <span class="fa fa-sort"></span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody infinite-scroll (scrolled)="loadPage(page + 1)" [infiniteScrollDisabled]="page >= links['last']" [infiniteScrollDistance]="0">
+            <tr *ngFor="let post of posts ;trackBy: trackId">
+                <td><a [routerLink]="['../post', post.id ]">{{post.id}}</a></td>
+                <td>{{post.title}}</td>
+                <td>{{post.content}}</td>
+                <td>{{post.date | date:'medium'}}</td>
+                <td>
+                    <div *ngIf="post.category">
+                        <a [routerLink]="['../category', post.category?.id ]" >{{post.category?.name}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../post', post.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'post/'+ post.id + '/edit'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'post/'+ post.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
