@@ -4,14 +4,19 @@ import { Observable } from 'rxjs/Observable';
 import { SERVER_API_URL } from '../../app.constants';
 
 import { Comment } from './comment.model';
-import { ResponseWrapper, createRequestOption } from '../../shared';
+import {ResponseWrapper, createRequestOption, User} from '../../shared';
+import {JhiAlertService, JhiEventManager} from 'ng-jhipster';
 
 @Injectable()
 export class CommentService {
 
     private resourceUrl =  SERVER_API_URL + 'api/comments';
-
-    constructor(private http: Http) { }
+    private isSaving: Boolean = false;
+    constructor(
+        private http: Http,
+        private eventManager: JhiEventManager,
+        private jhiAlertService: JhiAlertService
+    ) { }
 
     create(comment: Comment): Observable<Comment> {
         const copy = this.convert(comment);
@@ -76,5 +81,40 @@ export class CommentService {
     private convert(comment: Comment): Comment {
         const copy: Comment = Object.assign({}, comment);
         return copy;
+    }
+
+    /**
+     * Method of comment dialog.
+     */
+    clear() {
+    }
+
+    save(comment: Comment) {
+        this.isSaving = true;
+        if (comment.id !== undefined) {
+            this.subscribeToSaveResponse(
+                this.update(comment));
+        } else {
+            this.subscribeToSaveResponse(
+                this.create(comment));
+        }
+    }
+
+    private subscribeToSaveResponse(result: Observable<Comment>) {
+        result.subscribe((res: Comment) =>
+            this.onSaveSuccess(res), (res: Response) => this.onSaveError());
+    }
+
+    private onSaveSuccess(result: Comment) {
+        this.eventManager.broadcast({ name: 'commentListModification', content: 'OK'});
+        this.isSaving = false;
+    }
+
+    private onSaveError() {
+        this.isSaving = false;
+    }
+
+    private onError(error: any) {
+        this.jhiAlertService.error(error.message, null, null);
     }
 }

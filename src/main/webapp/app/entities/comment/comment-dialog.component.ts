@@ -29,7 +29,6 @@ export class CommentDialogComponent implements OnInit {
     comments: Comment[];
 
     constructor(
-        public activeModal: NgbActiveModal,
         private jhiAlertService: JhiAlertService,
         private commentService: CommentService,
         private userService: UserService,
@@ -49,17 +48,16 @@ export class CommentDialogComponent implements OnInit {
     }
 
     clear() {
-        this.activeModal.dismiss('cancel');
     }
 
-    save() {
+    save(comment: Comment) {
         this.isSaving = true;
-        if (this.comment.id !== undefined) {
+        if (comment.id !== undefined) {
             this.subscribeToSaveResponse(
-                this.commentService.update(this.comment));
+                this.commentService.update(comment));
         } else {
             this.subscribeToSaveResponse(
-                this.commentService.create(this.comment));
+                this.commentService.create(comment));
         }
     }
 
@@ -71,7 +69,6 @@ export class CommentDialogComponent implements OnInit {
     private onSaveSuccess(result: Comment) {
         this.eventManager.broadcast({ name: 'commentListModification', content: 'OK'});
         this.isSaving = false;
-        this.activeModal.dismiss(result);
     }
 
     private onSaveError() {

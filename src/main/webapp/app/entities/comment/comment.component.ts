@@ -17,6 +17,9 @@ export class CommentComponent implements OnInit, OnDestroy {
     comments: Comment[];
     currentAccount: any;
     eventSubscriber: Subscription;
+    isVisibleTextArea: Boolean = false;
+    message: string;
+    newComment: Comment = new Comment();
 
     constructor(
         private commentService: CommentService,
@@ -24,6 +27,25 @@ export class CommentComponent implements OnInit, OnDestroy {
         private eventManager: JhiEventManager,
         private principal: Principal
     ) {
+    }
+
+    send() {
+        if (this.message) {
+            this.newComment.content = this.message;
+            this.newComment.post = this.post;
+            this.newComment.vote = 0;
+            this.newComment.user = this.currentAccount;
+            this.commentService.save(this.newComment);
+            this.isVisibleTextArea = !this.isVisibleTextArea;
+        }
+    }
+
+    authorizedComment(index: number): boolean {
+        if ( this.currentAccount.login === 'admin' || this.comments[index].user.id === this.currentAccount.id ) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     loadAll() {
@@ -60,11 +82,10 @@ export class CommentComponent implements OnInit, OnDestroy {
         return item.id;
     }
     registerChangeInComments() {
-        this.eventSubscriber = this.eventManager.subscribe('commentListModification', (response) => this.loadAll());
+        this.eventSubscriber = this.eventManager.subscribe('commentListModification', (response) => this.loadAllByPostId(this.post.id));
     }
 
     private onError(error) {
-        console.log('olala');
         console.log(error);
         this.jhiAlertService.error(error.message, null, null);
     }

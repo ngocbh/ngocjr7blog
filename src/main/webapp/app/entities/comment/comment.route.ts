@@ -28,26 +28,6 @@ export const commentRoute: Routes = [
 
 export const commentPopupRoute: Routes = [
     {
-        path: 'comment-new',
-        component: CommentPopupComponent,
-        data: {
-            authorities: ['ROLE_USER'],
-            pageTitle: 'ngocjr7BlogApp.comment.home.title'
-        },
-        canActivate: [UserRouteAccessService],
-        outlet: 'popup'
-    },
-    {
-        path: 'comment/:id/edit',
-        component: CommentPopupComponent,
-        data: {
-            authorities: ['ROLE_USER'],
-            pageTitle: 'ngocjr7BlogApp.comment.home.title'
-        },
-        canActivate: [UserRouteAccessService],
-        outlet: 'popup'
-    },
-    {
         path: 'comment/:id/delete',
         component: CommentDeletePopupComponent,
         data: {
