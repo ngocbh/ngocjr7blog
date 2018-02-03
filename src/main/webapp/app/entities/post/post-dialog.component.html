@@ -7,11 +7,6 @@
     </div>
     <div class="modal-body">
         <jhi-alert-error></jhi-alert-error>
-        <div class="form-group" [hidden]="!post.id">
-            <label for="id" jhiTranslate="global.field.id">ID</label>
-            <input type="text" class="form-control" id="id" name="id"
-                   [(ngModel)]="post.id" readonly />
-        </div>
         <div class="form-group">
             <label class="form-control-label" jhiTranslate="ngocjr7BlogApp.post.title" for="field_title">Title</label>
             <input type="text" class="form-control" name="title" id="field_title"
@@ -23,10 +18,11 @@
                 </small>
             </div>
         </div>
-        <div class="form-group">
+        <div>
             <label class="form-control-label" jhiTranslate="ngocjr7BlogApp.post.content" for="field_content">Content</label>
-            <input type="text" class="form-control" name="content" id="field_content"
-                [(ngModel)]="post.content" />
+            <ckeditor class="form-control" name="content" id="field_content"
+                          ngDefaultControl [(ngModel)]="post.content">
+            </ckeditor>
         </div>
 
         <div class="form-group">

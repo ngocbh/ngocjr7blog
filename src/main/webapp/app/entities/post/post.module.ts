@@ -8,13 +8,15 @@ import {
     PostComponent,
     PostDetailComponent,
     PostDialogComponent,
-    PostPopupComponent,
+    PostDirectionComponent,
     PostDeletePopupComponent,
     PostDeleteDialogComponent,
     postRoute,
     postPopupRoute,
 } from './';
 import {Ngocjr7BlogCommentModule} from '../comment/comment.module';
+import { CKEditorModule} from 'ng2-ckeditor';
+import {CkeditorComponent} from './ckeditor.component';
 
 const ENTITY_STATES = [
     ...postRoute,
@@ -25,21 +27,23 @@ const ENTITY_STATES = [
     imports: [
         Ngocjr7BlogSharedModule,
         Ngocjr7BlogCommentModule,
+        CKEditorModule,
         RouterModule.forChild(ENTITY_STATES),
-        RouterModule.forRoot(ENTITY_STATES, { useHash: true })
+        RouterModule.forRoot(ENTITY_STATES, { useHash: true }),
     ],
     declarations: [
         PostComponent,
         PostDetailComponent,
         PostDialogComponent,
         PostDeleteDialogComponent,
-        PostPopupComponent,
+        PostDirectionComponent,
         PostDeletePopupComponent,
+        CkeditorComponent
     ],
     entryComponents: [
         PostComponent,
         PostDialogComponent,
-        PostPopupComponent,
+        PostDirectionComponent,
         PostDeleteDialogComponent,
         PostDeletePopupComponent,
     ],

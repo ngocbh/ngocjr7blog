@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 import { UserRouteAccessService } from '../../shared';
 import { PostComponent } from './post.component';
 import { PostDetailComponent } from './post-detail.component';
-import {PostDialogComponent, PostPopupComponent} from './post-dialog.component';
+import {PostDialogComponent, PostDirectionComponent} from './post-dialog.component';
 import { PostDeletePopupComponent } from './post-delete-dialog.component';
 
 export const postRoute: Routes = [
@@ -25,7 +25,7 @@ export const postRoute: Routes = [
         canActivate: [UserRouteAccessService]
     }, {
         path: 'post-new',
-        component: PostDialogComponent,
+        component: PostDirectionComponent,
         data: {
             authorities: ['ROLE_ADMIN'],
             pageTitle: 'ngocjr7BlogApp.post.home.title'
@@ -34,7 +34,7 @@ export const postRoute: Routes = [
     },
     {
         path: 'post/:id/edit',
-        component: PostDialogComponent,
+        component: PostDirectionComponent,
         data: {
             authorities: ['ROLE_ADMIN'],
             pageTitle: 'ngocjr7BlogApp.post.home.title'

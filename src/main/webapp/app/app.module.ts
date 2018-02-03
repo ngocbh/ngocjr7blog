@@ -24,6 +24,7 @@ import {
     ActiveMenuDirective,
     ErrorComponent
 } from './layouts';
+import { SidebarNavComponent } from './layouts/sidebar-nav/sidebar-nav.component';
 
 @NgModule({
     imports: [
@@ -43,7 +44,8 @@ import {
         ErrorComponent,
         PageRibbonComponent,
         ActiveMenuDirective,
-        FooterComponent
+        FooterComponent,
+        SidebarNavComponent
     ],
     providers: [
         ProfileService,

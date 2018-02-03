@@ -8,7 +8,7 @@
     <jhi-alert-error></jhi-alert-error>
     <dl class="row-md jh-entity-details">
         <dd>
-            <span>{{post.content}}</span>
+            <div [innerHTML]="post.content"></div>
         </dd>
 
         <table>
@@ -47,7 +47,7 @@
     </button>
 
     <button type="button"
-            [routerLink]="['/', { outlets: { popup: 'post/'+ post.id + '/edit'} }]"
+            [routerLink]="['/post/'+post.id+'/edit']"
             replaceUrl="true"
             queryParamsHandling="merge"
             class="btn btn-primary"

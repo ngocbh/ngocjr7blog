@@ -7,7 +7,6 @@ import { PostService } from './post.service';
 
 @Injectable()
 export class PostPopupService {
-    private ngbModalRef: NgbModalRef;
 
     constructor(
         private datePipe: DatePipe,
@@ -16,43 +15,22 @@ export class PostPopupService {
         private postService: PostService
 
     ) {
-        this.ngbModalRef = null;
     }
 
-    open(component: Component, id?: number | any): Promise<NgbModalRef> {
-        return new Promise<NgbModalRef>((resolve, reject) => {
-            const isOpen = this.ngbModalRef !== null;
-            if (isOpen) {
-                resolve(this.ngbModalRef);
-            }
-
+    open(component: Component, id?: number | any): Promise<Post> {
+        return new Promise<Post>((resolve, reject) => {
             if (id) {
                 this.postService.find(id).subscribe((post) => {
                     post.date = this.datePipe
                         .transform(post.date, 'yyyy-MM-ddTHH:mm:ss');
-                    this.ngbModalRef = this.postModalRef(component, post);
-                    resolve(this.ngbModalRef);
+                    resolve(post);
                 });
             } else {
                 // setTimeout used as a workaround for getting ExpressionChangedAfterItHasBeenCheckedError
                 setTimeout(() => {
-                    this.ngbModalRef = this.postModalRef(component, new Post());
-                    resolve(this.ngbModalRef);
+                    resolve(new Post());
                 }, 0);
             }
         });
-    }
-
-    postModalRef(component: Component, post: Post): NgbModalRef {
-        const modalRef = this.modalService.open(component, { size: 'lg', backdrop: 'static'});
-        modalRef.componentInstance.post = post;
-        modalRef.result.then((result) => {
-            this.router.navigate([{ outlets: { popup: null }}], { replaceUrl: true, queryParamsHandling: 'merge' });
-            this.ngbModalRef = null;
-        }, (reason) => {
-            this.router.navigate([{ outlets: { popup: null }}], { replaceUrl: true, queryParamsHandling: 'merge' });
-            this.ngbModalRef = null;
-        });
-        return modalRef;
     }
 }

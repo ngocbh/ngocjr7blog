@@ -1,4 +1,7 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import {
+    Component, OnInit, OnDestroy, ComponentFactoryResolver, ComponentFactory, ComponentRef,
+    ReflectiveInjector, ViewChild, ViewContainerRef, Input
+} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Response } from '@angular/http';
 
@@ -19,9 +22,8 @@ import {DatePipe} from '@angular/common';
 })
 export class PostDialogComponent implements OnInit {
 
-    post: Post = new Post();
+    @Input() post: Post;
     isSaving: boolean;
-
     categories: Category[];
 
     tags: Tag[];
@@ -32,11 +34,13 @@ export class PostDialogComponent implements OnInit {
         private postService: PostService,
         private categoryService: CategoryService,
         private tagService: TagService,
-        private eventManager: JhiEventManager
+        private eventManager: JhiEventManager,
     ) {
+
     }
 
     ngOnInit() {
+        console.log(1);
         this.isSaving = false;
         this.categoryService.query()
             .subscribe((res: ResponseWrapper) => { this.categories = res.json; }, (res: ResponseWrapper) => this.onError(res.json));
@@ -103,23 +107,34 @@ export class PostDialogComponent implements OnInit {
     selector: 'jhi-post-popup',
     template: ''
 })
-export class PostPopupComponent implements OnInit, OnDestroy {
-
+export class PostDirectionComponent implements OnInit, OnDestroy {
     routeSub: any;
-
+    componentRef: ComponentRef<any>;
     constructor(
         private route: ActivatedRoute,
-        private postPopupService: PostPopupService
+        private postPopupService: PostPopupService,
+        private resolver: ComponentFactoryResolver,
+        private container: ViewContainerRef
     ) {}
 
     ngOnInit() {
         this.routeSub = this.route.params.subscribe((params) => {
             if ( params['id'] ) {
                 this.postPopupService
-                    .open(PostDialogComponent as Component, params['id']);
+                    .open(PostDialogComponent as Component, params['id']).then((post) => {
+                        this.container.clear();
+                        const factory: ComponentFactory<any> = this.resolver.resolveComponentFactory(PostDialogComponent);
+                        this.componentRef = this.container.createComponent(factory);
+                        this.componentRef.instance.post = post;
+                });
             } else {
                 this.postPopupService
-                    .open(PostDialogComponent as Component);
+                    .open(PostDialogComponent as Component).then((post) => {
+                        this.container.clear();
+                        const factory: ComponentFactory<any> = this.resolver.resolveComponentFactory(PostDialogComponent);
+                        this.componentRef = this.container.createComponent(factory);
+                        this.componentRef.instance.post = post; // Must set post in PostDialogComponent is Input Data Binding
+                });
             }
         });
     }
