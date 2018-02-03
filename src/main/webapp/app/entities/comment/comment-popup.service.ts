@@ -29,6 +29,7 @@ export class CommentPopupService {
                     this.ngbModalRef = this.commentModalRef(component, comment);
                     resolve(this.ngbModalRef);
                 });
+
             } else {
                 // setTimeout used as a workaround for getting ExpressionChangedAfterItHasBeenCheckedError
                 setTimeout(() => {

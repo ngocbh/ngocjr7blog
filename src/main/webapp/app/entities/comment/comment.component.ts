@@ -41,11 +41,15 @@ export class CommentComponent implements OnInit, OnDestroy {
     }
 
     authorizedComment(index: number): boolean {
-        if ( this.currentAccount.login === 'admin' || this.comments[index].user.id === this.currentAccount.id ) {
-            return true;
+        if (this.currentAccount) {
+            if (this.currentAccount.login === 'admin' || this.comments[index].user.id === this.currentAccount.id) {
+                return true;
+            } else {
+                return false;
+            }
         } else {
             return false;
-        }
+        };
     }
 
     loadAll() {
@@ -58,7 +62,7 @@ export class CommentComponent implements OnInit, OnDestroy {
     }
 
     loadAllByPostId(id) {
-        this.commentService.queryByStoryId(id).subscribe(
+        this.commentService.queryByPostId(id).subscribe(
             (res: ResponseWrapper) => {
                 this.comments = res.json;
             },
@@ -86,7 +90,6 @@ export class CommentComponent implements OnInit, OnDestroy {
     }
 
     private onError(error) {
-        console.log(error);
         this.jhiAlertService.error(error.message, null, null);
     }
 }

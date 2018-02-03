@@ -90,16 +90,24 @@ public class CommentResource {
         }
 
     /**
-     * GET  /comments/:id : get comments by postz's id
+     * GET  /comments/:id : get comments by post's id
      *
      * @param id the id of the post to retrieve
      * @return the ResponseEntity with status 200 (OK) and with body the comment, or with status 404 (Not Found)
      */
-    @GetMapping("/comments/{id}")
+    @GetMapping("/comments/post/{id}")
     @Timed
     public List<Comment> getCommentByPostId(@PathVariable Long id) {
-        log.debug("REST request to get Comment : {}", id);
+        log.debug("REST request to get Comment by Post ID : {}", id);
         return commentRepository.findAllByPostId(id);
+    }
+
+    @GetMapping("/comments/{id}")
+    @Timed
+    public ResponseEntity<Comment> getComment(@PathVariable Long id) {
+        log.debug("REST request to get Comment : {}", id);
+        Comment comment = commentRepository.findOne(id);
+        return ResponseUtil.wrapOrNotFound(Optional.ofNullable(comment));
     }
 
     /**
