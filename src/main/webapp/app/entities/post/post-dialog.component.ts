@@ -9,7 +9,7 @@ import { Observable } from 'rxjs/Observable';
 import { JhiEventManager, JhiAlertService } from 'ng-jhipster';
 
 import { Post } from './post.model';
-import { PostPopupService } from './post-popup.service';
+import { PostDirectionService} from './post-popup.service';
 import { PostService } from './post.service';
 import { Category, CategoryService } from '../category';
 import { Tag, TagService } from '../tag';
@@ -40,7 +40,6 @@ export class PostDialogComponent implements OnInit {
     }
 
     ngOnInit() {
-        console.log(1);
         this.isSaving = false;
         this.categoryService.query()
             .subscribe((res: ResponseWrapper) => { this.categories = res.json; }, (res: ResponseWrapper) => this.onError(res.json));
@@ -54,6 +53,7 @@ export class PostDialogComponent implements OnInit {
 
     save() {
         this.isSaving = true;
+        console.log(this.post.content);
         this.post.date = this.datePipe.transform(new Date(), 'yyyy-MM-ddTHH:mm:ss')
         if (this.post.id !== undefined) {
             this.subscribeToSaveResponse(
@@ -112,7 +112,7 @@ export class PostDirectionComponent implements OnInit, OnDestroy {
     componentRef: ComponentRef<any>;
     constructor(
         private route: ActivatedRoute,
-        private postPopupService: PostPopupService,
+        private postDirectionService: PostDirectionService,
         private resolver: ComponentFactoryResolver,
         private container: ViewContainerRef
     ) {}
@@ -120,7 +120,7 @@ export class PostDirectionComponent implements OnInit, OnDestroy {
     ngOnInit() {
         this.routeSub = this.route.params.subscribe((params) => {
             if ( params['id'] ) {
-                this.postPopupService
+                this.postDirectionService
                     .open(PostDialogComponent as Component, params['id']).then((post) => {
                         this.container.clear();
                         const factory: ComponentFactory<any> = this.resolver.resolveComponentFactory(PostDialogComponent);
@@ -128,7 +128,7 @@ export class PostDirectionComponent implements OnInit, OnDestroy {
                         this.componentRef.instance.post = post;
                 });
             } else {
-                this.postPopupService
+                this.postDirectionService
                     .open(PostDialogComponent as Component).then((post) => {
                         this.container.clear();
                         const factory: ComponentFactory<any> = this.resolver.resolveComponentFactory(PostDialogComponent);

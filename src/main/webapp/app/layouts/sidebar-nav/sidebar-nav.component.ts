@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'jhi-sidebar-nav',
   templateUrl: './sidebar-nav.component.html',
     styleUrls: [
-
+        'sidebar-nav.css'
     ]
 })
 export class SidebarNavComponent implements OnInit {

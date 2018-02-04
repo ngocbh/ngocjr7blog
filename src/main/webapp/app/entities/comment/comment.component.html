@@ -1,73 +1,70 @@
-<div>
-    <h2>
-        <span jhiTranslate="ngocjr7BlogApp.comment.home.title">Comments</span>
-        <button class="btn btn-primary float-right jh-create-entity create-comment"
-                *jhiHasAnyAuthority="'ROLE_USER'"
-                (click)='isVisibleTextArea = !isVisibleTextArea'>
-            <span class="fa fa-plus"></span>
-            <span>
-            Create new Comment
-            </span>
-        </button>
-    </h2>
-    <div *ngIf='isVisibleTextArea'>
-        <textarea cols="50" rows="5"
-            [(ngModel)]="message">
-        </textarea>
-        <button (click)="send()">Send</button>
-    </div>
-
-    <div class="row">
-    </div>
-    <br/>
-    <div class="table-responsive" *ngIf="comments">
-        <table class="table table-striped">
-            <thead>
-            <tr>
-            <th><span jhiTranslate="ngocjr7BlogApp.comment.content">Content</span></th>
-            <th><span jhiTranslate="ngocjr7BlogApp.comment.vote">Vote</span></th>
-            <th><span jhiTranslate="ngocjr7BlogApp.comment.user">User</span></th>
-            <th></th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr *ngFor="let comment of comments ; let i = index; trackBy: trackId">
-                <td>{{comment.content}}</td>
-                <td>{{comment.vote}}</td>
-                <td>
-                    {{comment.user?.login}}
-                </td>
-                <td>
-                    <div *ngIf="comment.pcomment">
-                        <a [routerLink]="['../comment', comment.pcomment?.id ]" >{{comment.pcomment?.id}}</a>
-                    </div>
-                </td>
-                <td class="text-right">
+<li id="comments-list" class="comments-list">
+    <div class="comment-main-level">
+        <!-- Avatar -->
+        <div class="comment-avatar"><img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png" alt=""></div>
+        <!-- Contenedor del Comentario -->
+        <div class="comment-box">
+            <div class="comment-head">
+                <h6 class="comment-name">
+                    <div class="comment-name by-author" *ngIf="this.comment.user.login === 'admin'"></div>
+                    <a href="http://creaticode.com/blog">{{comment.user?.login}}</a>
+                </h6>
+                <span>commented on - hừm... i dont know</span>
+                <i *ngIf="authorizedComment">
                     <div class="btn-group flex-btn-group-container">
-                        <button type="submit"
-                                [routerLink]="['/', { outlets: { popup: 'comment/'+ comment.id + '/edit'} }]"
-                                replaceUrl="true"
-                                queryParamsHandling="merge"
-                                class="btn btn-primary btn-sm"
-                                *jhiHasAnyAuthority="'ROLE_USER'">
-                            <span class="fa fa-pencil"></span>
-                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
-                        </button>
-                        <ng-container *ngIf="authorizedComment(i)">
-                            <button type="submit"
-                                    [routerLink]="['/', { outlets: { popup: 'comment/'+ comment.id + '/delete'} }]"
-                                    replaceUrl="true"
-                                    queryParamsHandling="merge"
-                                    class="btn btn-danger btn-sm"
-                                    *jhiHasAnyAuthority="'ROLE_USER'">
-                                <span class="fa fa-remove"></span>
-                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
-                            </button>
-                        </ng-container>
+                        <i *jhiHasAnyAuthority="'ROLE_USER'"
+                           class="fa fa-pencil"></i>
+                        <i [routerLink]="['/', { outlets: { popup: 'comment/'+ comment.id + '/delete'} }]"
+                           class="fa fa-remove"
+                           replaceUrl="true"
+                           queryParamsHandling="merge"
+                           *jhiHasAnyAuthority="'ROLE_USER'">
+                        </i>
                     </div>
-                </td>
-            </tr>
-            </tbody>
-        </table>
+                </i>
+                <i class="fa fa-reply"></i>
+                <i class="fa fa-heart"
+                    (click)="likeComment()"></i>
+                <i>{{comment.vote}}</i>
+            </div>
+            <div class="comment-content" [innerHTML]="comment.content">
+            </div>
+        </div>
     </div>
-</div>
+</li>
+<!-- Respuestas de los comentarios -->
+<!--<ul class="comments-list reply-list">-->
+    <!--<li>-->
+        <!--&lt;!&ndash; Avatar &ndash;&gt;-->
+        <!--<div class="comment-avatar"><img src="http://i9.photobucket.com/albums/a88/creaticode/avatar_2_zps7de12f8b.jpg" alt=""></div>-->
+        <!--&lt;!&ndash; Contenedor del Comentario &ndash;&gt;-->
+        <!--<div class="comment-box">-->
+            <!--<div class="comment-head">-->
+                <!--<h6 class="comment-name"><a href="http://creaticode.com/blog">{{comment.user?.login}}</a></h6>-->
+                <!--<span>commented on ...</span>-->
+                <!--<i class="fa fa-reply"></i>-->
+                <!--<i class="fa fa-heart"></i>-->
+            <!--</div>-->
+            <!--<div class="comment-content">-->
+                <!--{{comment.content}}-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</li>-->
+
+    <!--<li>-->
+        <!--&lt;!&ndash; Avatar &ndash;&gt;-->
+        <!--<div class="comment-avatar"><img src="http://i9.photobucket.com/albums/a88/creaticode/avatar_1_zps8e1c80cd.jpg" alt=""></div>-->
+        <!--&lt;!&ndash; Contenedor del Comentario &ndash;&gt;-->
+        <!--<div class="comment-box">-->
+            <!--<div class="comment-head">-->
+                <!--<h6 class="comment-name by-author"><a href="http://creaticode.com/blog">Agustin Ortiz</a></h6>-->
+                <!--<span>hace 10 minutos</span>-->
+                <!--<i class="fa fa-reply"></i>-->
+                <!--<i class="fa fa-heart"></i>-->
+            <!--</div>-->
+            <!--<div class="comment-content">-->
+                <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</li>-->
+<!--</ul>-->

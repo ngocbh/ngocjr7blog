@@ -11,6 +11,7 @@ import {
     PostDirectionComponent,
     PostDeletePopupComponent,
     PostDeleteDialogComponent,
+    PostDirectionService,
     postRoute,
     postPopupRoute,
 } from './';
@@ -50,6 +51,7 @@ const ENTITY_STATES = [
     providers: [
         PostService,
         PostPopupService,
+        PostDirectionService
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

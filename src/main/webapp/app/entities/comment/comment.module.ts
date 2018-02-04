@@ -12,6 +12,7 @@ import {
     CommentPopupComponent,
     CommentDeletePopupComponent,
     CommentDeleteDialogComponent,
+    CommentListComponent,
     commentRoute,
     commentPopupRoute,
 } from './';
@@ -29,7 +30,7 @@ const ENTITY_STATES = [
         RouterModule.forRoot(ENTITY_STATES, { useHash: true }),
     ],
     exports: [
-        CommentComponent,
+        CommentListComponent
     ],
     declarations: [
         CommentComponent,
@@ -38,6 +39,7 @@ const ENTITY_STATES = [
         CommentDeleteDialogComponent,
         CommentPopupComponent,
         CommentDeletePopupComponent,
+        CommentListComponent
     ],
     entryComponents: [
         CommentComponent,

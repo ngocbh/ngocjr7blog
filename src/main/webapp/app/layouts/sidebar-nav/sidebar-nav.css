@@ -1,0 +1,103 @@
+td, th {
+    vertical-align: middle !important;
+}
+.left, .right {
+    float:left;
+    height:100vh;
+}
+
+.left {
+    background: #000000;
+    display: inline-block;
+    white-space: nowrap;
+    width: 50px;
+    transition: width 1s ;
+    position: sticky;
+    left:0;
+    top: 0;
+    bottom: 0;
+}
+
+.right {
+    background: #fff;
+    width: 350px;
+    transition: width 1s;
+    border-style:solid;
+    border-color:#ccc;
+    border-width:1px;
+}
+
+.left:hover {
+    width: 250px;
+}
+
+.item:hover {
+    background-color:#ccc;
+}
+
+.left .fa {
+    margin:15px;
+    width:20px;
+    color:#fff;
+}
+
+.right .fa {
+    color:#a9a9a9;
+}
+span.fa.fa-refresh{
+    font-size:17px;
+    vertical-align: middle !important;
+}
+
+.item {
+    height:61px;
+    overflow:hidden;
+    color:#fff;
+    font-weight : bold;
+}
+.title {
+    background-color:#eee;
+    border-style:solid;
+    border-color:#ccc;
+    border-width:1px;
+    box-sizing: border-box;
+}
+.search:hover {
+    border-color:#4aa9fb;
+    border-width:1px;
+}
+.search {
+    padding:3px 8px 3px !important;
+}
+input[type=search] {
+    padding: 10px 0px 10px;
+    border: 0px solid #fff;
+    background: #eee;
+    -webkit-appearance: none;
+    width:90%;
+    float:none;
+}
+input[type=search]:focus {
+    outline:none;
+}
+.type{
+    height: 47px;;
+}
+.date{
+    background-color:#f7f7f7
+}
+.docdate {
+    vertical-align:bottom !important;
+}
+.distr {
+    margin: 0 0 5px;
+    font-size: 20px;
+}
+.ndoc {
+    margin: 0 0 5px;
+}
+.storage {
+    margin: 0;
+    color: #aaa !important;
+    font-size: 12px;
+}

@@ -1,0 +1,30 @@
+<div>
+    <h2>
+        <span jhiTranslate="ngocjr7BlogApp.comment.home.title">Comments</span>
+        <button class="btn btn-primary float-right jh-create-entity create-comment"
+                *jhiHasAnyAuthority="'ROLE_USER'"
+                (click)='isVisibleTextArea = !isVisibleTextArea'>
+            <span class="fa fa-plus"></span>
+            <span>
+            Create new Comment
+            </span>
+        </button>
+    </h2>
+    <div *ngIf='isVisibleTextArea'>
+        <textarea cols="50" rows="5"
+                  [(ngModel)]="message">
+        </textarea>
+        <button (click)="send()">Send</button>
+    </div>
+
+    <div class="row">
+    <br/>
+    <div *ngIf="comments">
+        <ul id="comments-list" class="comments-list">
+            <li *ngFor="let comment of comments ; let i = index; trackBy: trackId">
+                <jhi-comment [comment]="comments[i]" [authorizedComment]="authorizedComment(i)"></jhi-comment>
+            </li>
+        </ul>
+    </div>
+    </div>
+</div>
