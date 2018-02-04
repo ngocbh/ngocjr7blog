@@ -13,7 +13,9 @@
                 <i *ngIf="authorizedComment">
                     <div class="btn-group flex-btn-group-container">
                         <i *jhiHasAnyAuthority="'ROLE_USER'"
-                           class="fa fa-pencil"></i>
+                           class="fa fa-pencil"
+                           (click)="isEditting = !isEditting">
+                        </i>
                         <i [routerLink]="['/', { outlets: { popup: 'comment/'+ comment.id + '/delete'} }]"
                            class="fa fa-remove"
                            replaceUrl="true"
@@ -27,12 +29,18 @@
                     (click)="likeComment()"></i>
                 <i>{{comment.vote}}</i>
             </div>
-            <div class="comment-content" [innerHTML]="comment.content">
+            <div class="comment-content" [innerHTML]="comment.content" *ngIf="!isEditting">
             </div>
+        </div>
+
+        <div *ngIf="isEditting">
+            <jhi-comment-box [(message)]="comment.content" (messageChange)="send()"></jhi-comment-box>
         </div>
     </div>
 </li>
-<!-- Respuestas de los comentarios -->
+
+
+<!-- Reply comment -->
 <!--<ul class="comments-list reply-list">-->
     <!--<li>-->
         <!--&lt;!&ndash; Avatar &ndash;&gt;-->

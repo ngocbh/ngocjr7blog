@@ -4,9 +4,16 @@
 </div>
 <jhi-sidebar-nav></jhi-sidebar-nav>
 <div class="container-fluid">
-<div class="card jh-card">
-    <router-outlet></router-outlet>
-    <router-outlet name="popup"></router-outlet>
-</div>
-<jhi-footer></jhi-footer>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card jh-card">
+                <router-outlet></router-outlet>
+                <router-outlet name="popup"></router-outlet>
+            </div>
+            <jhi-footer></jhi-footer>
+        </div>
+        <div class="col-md-4">
+            <jhi-sidebar-widgets-col></jhi-sidebar-widgets-col>
+        </div>
+    </div>
 </div>

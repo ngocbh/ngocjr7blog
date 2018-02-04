@@ -22,7 +22,7 @@ import {
     ProfileService,
     PageRibbonComponent,
     ActiveMenuDirective,
-    ErrorComponent
+    ErrorComponent, SidebarWidgetsColComponent
 } from './layouts';
 import { SidebarNavComponent } from './layouts/sidebar-nav/sidebar-nav.component';
 
@@ -45,7 +45,8 @@ import { SidebarNavComponent } from './layouts/sidebar-nav/sidebar-nav.component
         PageRibbonComponent,
         ActiveMenuDirective,
         FooterComponent,
-        SidebarNavComponent
+        SidebarNavComponent,
+        SidebarWidgetsColComponent
     ],
     providers: [
         ProfileService,

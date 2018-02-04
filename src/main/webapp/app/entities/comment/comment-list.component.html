@@ -11,12 +11,8 @@
         </button>
     </h2>
     <div *ngIf='isVisibleTextArea'>
-        <textarea cols="50" rows="5"
-                  [(ngModel)]="message">
-        </textarea>
-        <button (click)="send()">Send</button>
+        <jhi-comment-box [(message)]="message" (messageChange)="send()"></jhi-comment-box>
     </div>
-
     <div class="row">
     <br/>
     <div *ngIf="comments">

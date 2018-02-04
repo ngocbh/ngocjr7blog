@@ -13,6 +13,7 @@ import {
     CommentDeletePopupComponent,
     CommentDeleteDialogComponent,
     CommentListComponent,
+    CommentBoxComponent,
     commentRoute,
     commentPopupRoute,
 } from './';
@@ -39,7 +40,8 @@ const ENTITY_STATES = [
         CommentDeleteDialogComponent,
         CommentPopupComponent,
         CommentDeletePopupComponent,
-        CommentListComponent
+        CommentListComponent,
+        CommentBoxComponent
     ],
     entryComponents: [
         CommentComponent,
@@ -47,6 +49,7 @@ const ENTITY_STATES = [
         CommentPopupComponent,
         CommentDeleteDialogComponent,
         CommentDeletePopupComponent,
+        CommentBoxComponent
     ],
     providers: [
         CommentService,
