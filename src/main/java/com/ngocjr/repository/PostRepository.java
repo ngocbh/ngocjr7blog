@@ -1,6 +1,8 @@
 package com.ngocjr.repository;
 
 import com.ngocjr.domain.Post;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
 
 import org.springframework.data.jpa.repository.*;
@@ -19,4 +21,6 @@ public interface PostRepository extends JpaRepository<Post, Long> {
     @Query("select post from Post post left join fetch post.tags where post.id =:id")
     Post findOneWithEagerRelationships(@Param("id") Long id);
 
+    @Query("select post from Post post where post.category.id =:id")
+    List<Post> findAllPostsByCategoryId(@Param("id") Long id);
 }

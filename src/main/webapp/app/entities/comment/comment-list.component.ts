@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import {Component, OnInit, OnDestroy, OnChanges, SimpleChange, SimpleChanges} from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
 import { JhiEventManager, JhiAlertService } from 'ng-jhipster';
 
@@ -15,7 +15,7 @@ import {Input} from '@angular/core';
         'comment.css'
     ]
 })
-export class CommentListComponent implements OnInit, OnDestroy {
+export class CommentListComponent implements OnInit, OnDestroy, OnChanges {
     @Input('post') post: Post;
     comments: Comment[];
     currentAccount: any;
@@ -71,6 +71,10 @@ export class CommentListComponent implements OnInit, OnDestroy {
             },
             (res: ResponseWrapper) => this.onError(res.json)
         );
+    }
+
+    ngOnChanges(changes: SimpleChanges) {
+        this.loadAllByPostId(changes.post.currentValue.id);
     }
 
     ngOnInit() {

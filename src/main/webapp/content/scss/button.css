@@ -1,0 +1,48 @@
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button-green-border {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+
+.button-blue-border {
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+}
+
+.button-red-border {
+    background-color: white;
+    color: black;
+    border: 2px solid #f44336;
+}
+
+.button-gray-border {
+    background-color: white;
+    color: black;
+    border: 2px solid #e7e7e7;
+}
+
+.button-back-border {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+}
+
+.button-no-border {
+    background-color: white;
+    color: black;
+    border: 2px solid #ffffff;
+}

@@ -7,10 +7,13 @@ import com.ngocjr.repository.PostRepository;
 import com.ngocjr.web.rest.errors.BadRequestAlertException;
 import com.ngocjr.web.rest.util.HeaderUtil;
 import com.ngocjr.web.rest.util.PaginationUtil;
+import io.github.jhipster.config.JHipsterProperties;
 import io.github.jhipster.web.util.ResponseUtil;
+import org.h2.index.PageIndex;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -96,6 +99,24 @@ public class PostResource {
         Page<Post> page = postRepository.findAll(pageable);
         HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/posts");
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
+    }
+
+    /**
+     * GET /posts/category/:id get the post of 'id' category
+     *
+     * @param id the id of category
+     * @return the ResponseEntity with status 200 (OK) and the list of posts of category in body
+     */
+    @GetMapping("/posts/category/{id}")
+    @Timed
+    public ResponseEntity<List<Post>> getAllPostsByCategoryId(Pageable pageable,@PathVariable Long id) {
+        log.debug("REST request to get a page of Posts in Category 'id'");
+        List<Post> posts = postRepository.findAllPostsByCategoryId(id);
+        int start = pageable.getOffset();
+        int end = (start + pageable.getPageSize()) > posts.size() ? posts.size() : (start + pageable.getPageSize());
+        Page<Post> page = new PageImpl<Post>(posts.subList(start,end),pageable,posts.size());
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page,"/api/posts/category/{id}");
+        return new ResponseEntity<>(page.getContent(),headers,HttpStatus.OK);
     }
 
     /**

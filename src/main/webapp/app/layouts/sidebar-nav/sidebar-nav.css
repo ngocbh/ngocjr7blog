@@ -10,7 +10,7 @@ td, th {
     background: #000000;
     display: inline-block;
     white-space: nowrap;
-    width: 50px;
+    width: 60px;
     transition: width 1s ;
     position: sticky;
     left:0;
@@ -36,8 +36,8 @@ td, th {
 }
 
 .left .fa {
-    margin:15px;
-    width:20px;
+    margin:20px;
+    width:25px;
     color:#fff;
 }
 

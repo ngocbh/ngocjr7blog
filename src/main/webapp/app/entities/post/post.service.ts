@@ -44,6 +44,12 @@ export class PostService {
             .map((res: Response) => this.convertResponse(res));
     }
 
+    queryByCategoryId(req?: any, id?: number): Observable<ResponseWrapper> {
+        const options = createRequestOption(req);
+        return this.http.get(`${this.resourceUrl}/category/${id}`, options)
+            .map((res: Response) => this.convertResponse(res));
+    }
+
     delete(id: number): Observable<Response> {
         return this.http.delete(`${this.resourceUrl}/${id}`);
     }

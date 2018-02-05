@@ -2,7 +2,7 @@
 <div *ngIf="post">
     <h2>{{post.title}}</h2>
     <dd>
-        <span>Post on {{post.date | date:'medium'}} by ngocjr7</span>
+        <span>Post on {{post.date | date:'mediumDate'}} by ngocjr7</span>
     </dd>
     <hr>
     <jhi-alert-error></jhi-alert-error>
@@ -17,22 +17,23 @@
                     <dt><span jhiTranslate="ngocjr7BlogApp.post.category">Category</span></dt>
                 </td>
                 <td>
-                    <dt><span jhiTranslate="ngocjr7BlogApp.post.tag">Tag</span></dt>
-                </td>
-            </tr>
-            <tr>
-                <td>
                     <dd>
                         <div *ngIf="post.category">
                             <a [routerLink]="['/category', post.category?.id]">{{post.category?.name}}</a>
                         </div>
                     </dd>
                 </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <dt><span jhiTranslate="ngocjr7BlogApp.post.tag">Tag</span></dt>
+                </td>
                 <td>
                     <dd>
-            <span *ngFor="let tag of post.tags; let last = last">
-                <a [routerLink]="['/tag', tag?.id ]">{{tag.name}}</a>{{last ? '' : ', '}}
-            </span>
+                        <span *ngFor="let tag of post.tags; let last = last">
+                            <a [routerLink]="['/tag', tag?.id ]">{{tag.name}}</a>{{last ? '' : ', '}}
+                        </span>
                     </dd>
                 </td>
             </tr>
