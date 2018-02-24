@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges, DoCheck } from '@angular/core';
 
 @Component({
   selector: 'jhi-sidebar-nav',
@@ -7,11 +7,22 @@ import { Component, OnInit } from '@angular/core';
         'sidebar-nav.css'
     ]
 })
-export class SidebarNavComponent implements OnInit {
+export class SidebarNavComponent implements OnInit, DoCheck {
+    @Input('choice') static choice: String = '';
+    @Output('choiceChange') choiceChange: EventEmitter<String> = new EventEmitter<String>();
+    constructor() {
+    }
 
-  constructor() { }
+    ngOnInit() {
+    }
 
-  ngOnInit() {
-  }
+    ngDoCheck() {
+        this.choiceChange.emit(SidebarNavComponent.choice);
+    }
+
+    onClick() {
+        SidebarNavComponent.choice = 'resume';
+        this.choiceChange.emit(SidebarNavComponent.choice);
+    }
 
 }

@@ -1,0 +1,24 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+			"folder_exclude_patterns": ["backup"]
+		}
+	],
+	"settings":
+    {
+        "tab_size": 4
+    },
+    "build_systems":
+    [
+        {
+            "name": "Build Back-end",
+            "cmd": "./mvnw"
+        },
+        {
+        	"name": "Build Front-end",
+        	"shell_cmd": "yarn start"
+        }
+    ]
+}

@@ -10,3 +10,4 @@ export * from './profiles/profile.service';
 export * from './profiles/profile-info.model';
 export * from './sidebar-nav/sidebar-nav.component';
 export * from './sidebar-widgets-col/sidebar-widgets-col.component'
+export * from './sidebar-nav/sidebar-nav.route'

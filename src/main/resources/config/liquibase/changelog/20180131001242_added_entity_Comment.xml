@@ -52,4 +52,9 @@
                         newDataType="longtext"
                         tableName="comment"/>
     </changeSet>
+    <changeSet author="jhipster" id="20180213001457-1">
+        <modifyDataType columnName="content"
+                        newDataType="varchar(2000)"
+                        tableName="comment"/>
+    </changeSet>
 </databaseChangeLog>

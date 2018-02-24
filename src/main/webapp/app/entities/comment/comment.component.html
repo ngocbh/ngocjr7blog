@@ -6,7 +6,7 @@
         <div class="comment-box">
             <div class="comment-head">
                 <h6 class="comment-name">
-                    <div class="comment-name by-author" *ngIf="this.comment.user.login === 'admin'"></div>
+                    <div class="comment-name by-author" *ngIf="this.comment.user?.login === 'admin'"></div>
                     <a href="http://creaticode.com/blog">{{comment.user?.login}}</a>
                 </h6>
                 <span>commented on - hừm... i dont know</span>

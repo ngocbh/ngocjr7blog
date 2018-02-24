@@ -1,7 +1,10 @@
 <div class="left">
-    <div class="item">
-        <i class="fa fa-university"></i>
-        Ú Òa</div>
+    <div class="item " routerLink=''>
+        <div class="_title">
+            <span class="logo-img"></span>
+            <span style="margin-left: 17px; font-size: 16px;">Hello! I'm ngocjr7</span>
+        </div>
+    </div>
     <div class="item active">
         <i class="fa fa-comments"></i>
         Message Me</div>
@@ -11,10 +14,10 @@
     <div class="item">
         <i class="fa fa-american-sign-language-interpreting"></i>
         Reference</div>
-    <div class="item">
+    <div class="item" (click)='onClick()' routerLink="resume" >
         <i class="fa fa-male"></i>
         About Me</div>
-    <div class="item">
-        <i class="fa fa-address-book"></i>
-        Contact</div>
+    <!--<div class="item">-->
+        <!--<i class="fa fa-address-book"></i>-->
+        <!--Contact</div>-->
 </div>

@@ -1,0 +1,10 @@
+cmd: "./mvnw"
+name: "Build Back-end"
+cwd: "/Users/ngocjr/Workspace/Project/Jhipster/ngocjr7blog"
+sh: true
+targets:
+  frontend:
+    cmd: "yarn start"
+    name: "Build Front-end"
+    sh: true
+      # (any previous options are viable here except `targets` itself)

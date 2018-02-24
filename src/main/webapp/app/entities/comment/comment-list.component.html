@@ -3,7 +3,7 @@
         <span jhiTranslate="ngocjr7BlogApp.comment.home.title">Comments</span>
         <button class="btn btn-primary float-right jh-create-entity create-comment"
                 *jhiHasAnyAuthority="'ROLE_USER'"
-                (click)='isVisibleTextArea = !isVisibleTextArea'>
+                (click)="isVisibleTextArea = !isVisibleTextArea; message = ''">
             <span class="fa fa-plus"></span>
             <span>
             Comment

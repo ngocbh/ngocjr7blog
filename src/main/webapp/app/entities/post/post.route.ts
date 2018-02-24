@@ -40,6 +40,13 @@ export const postRoute: Routes = [
             pageTitle: 'ngocjr7BlogApp.post.home.title'
         },
         canActivate: [UserRouteAccessService],
+    }, {
+        path: 'category/:categoryId/post-new',
+        component: PostDirectionComponent,
+        data: {
+            authorities: ['ROLE_ADMIN'],
+            pageTitle: 'ngocjr7BlogApp.post.home.title'
+        }
     }
 ];
 

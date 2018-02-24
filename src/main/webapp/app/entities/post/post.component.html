@@ -19,31 +19,7 @@
     <div class="table-responsive" *ngIf="posts">
         <div infinite-scroll (scrolled)="loadPage(page + 1)" [infiniteScrollDisabled]="page >= links['last']" [infiniteScrollDistance]="0">
             <div *ngFor="let post of posts; trackBy: trackId">
-                <h2>
-                    <span [routerLink]="['/post/',post.id ]">
-                        <a style="color: #000000; font-size: 25px" href="javascript:void(0);">{{post.title}}</a>
-                    </span>
-                    <div class="btn-group mb-2 mt-1">
-                        <button type="submit"
-                                [routerLink]="['/post/'+post.id+'/edit']"
-                                replaceUrl="true"
-                                class="button button-no-border"
-                                *jhiHasAnyAuthority="'ROLE_ADMIN'">
-                            <span class="fa fa-pencil"></span>
-                            <span class="hidden-md-down" ></span>
-                        </button>
-                        <button type="submit"
-                                [routerLink]="['/', { outlets: { popup: 'post/'+ post.id + '/delete'} }]"
-                                replaceUrl="true"
-                                class="button button-no-border"
-                                *jhiHasAnyAuthority="'ROLE_ADMIN'">
-                            <span class="fa fa-remove"></span>
-                            <span class="hidden-md-down" ></span>
-                        </button>
-                    </div>
-                </h2>
-                <small>Posted on {{post.date | date: 'mediumDate'}} by ADMIN</small>
-                <div [innerHTML]="post.content"></div>
+                <jhi-post-preview [post]="post"></jhi-post-preview>
             </div>
         </div>
     </div>

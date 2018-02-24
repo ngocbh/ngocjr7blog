@@ -97,7 +97,6 @@ export class CategoryDetailComponent implements OnInit, OnDestroy {
     }
 
     loadPage(page) {
-        console.log('loadPage');
         this.page = page;
         this.loadAllByCategoryId(this.category.id);
     }
@@ -113,7 +112,7 @@ export class CategoryDetailComponent implements OnInit, OnDestroy {
     private onSuccess(data, headers) {
         this.links = this.parseLinks.parse(headers.get('link'));
         this.totalItems = headers.get('X-Total-Count');
-        for (let i = 0; i < data.length; i++) {
+        for (let i = data.length; i >= 0; i--) {
             this.posts.push(data[i]);
         }
     }

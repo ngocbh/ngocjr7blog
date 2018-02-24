@@ -1,0 +1,945 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Emit",
+				"EventEmitter"
+			],
+			[
+				"c",
+				"color"
+			],
+			[
+				"a",
+				"AppComponent"
+			],
+			[
+				"sra",
+				"search_for"
+			],
+			[
+				"postfixArr",
+				"postfixArrayR"
+			],
+			[
+				"post",
+				"postfixArrayL"
+			],
+			[
+				"po",
+				"postfixArrayL"
+			],
+			[
+				"pos",
+				"postfixArray"
+			],
+			[
+				"r",
+				"r"
+			],
+			[
+				"w",
+				"weight"
+			],
+			[
+				"fin",
+				"findRoot"
+			],
+			[
+				"prin",
+				"printfMap"
+			],
+			[
+				"qu",
+				"priority_queue"
+			],
+			[
+				"Pri",
+				"primMadeByNgocJR7"
+			],
+			[
+				"so",
+				"shortestPathInCycle"
+			],
+			[
+				"shor",
+				"shortestCycle"
+			],
+			[
+				"m",
+				"m"
+			],
+			[
+				"cur",
+				"curLeft"
+			],
+			[
+				"sin",
+				"sinAngle"
+			],
+			[
+				"init",
+				"init_right"
+			],
+			[
+				"ad",
+				"admin-script"
+			],
+			[
+				"man",
+				"manager-gui"
+			],
+			[
+				"ye",
+				"yearsLabel"
+			],
+			[
+				"virus",
+				"virusCount"
+			],
+			[
+				"lo",
+				"long\tprivate"
+			],
+			[
+				"root",
+				"RootApplet"
+			],
+			[
+				"Hi",
+				"HiWorld"
+			],
+			[
+				"i",
+				"i"
+			],
+			[
+				"b",
+				"b"
+			],
+			[
+				"de",
+				"degree"
+			],
+			[
+				"read",
+				"read_int"
+			],
+			[
+				"rea",
+				"read_int"
+			],
+			[
+				"list",
+				"listOfQuery"
+			],
+			[
+				"sum",
+				"sumxor"
+			],
+			[
+				"pc",
+				"pCrawl"
+			],
+			[
+				"rem",
+				"remLevel"
+			],
+			[
+				"pC",
+				"pCrawl"
+			],
+			[
+				"pCr",
+				"pCrawl2"
+			],
+			[
+				"pcr",
+				"pCrawl2"
+			],
+			[
+				"p",
+				"pCrawl"
+			],
+			[
+				"lis",
+				"listOfQuery"
+			],
+			[
+				"numof",
+				"numOfPillar"
+			],
+			[
+				"end",
+				"EndGame"
+			],
+			[
+				"numo",
+				"numOfRow"
+			],
+			[
+				"curPR",
+				"curPR"
+			],
+			[
+				"check",
+				"CheckLost_goUp"
+			],
+			[
+				"checkl",
+				"CheckLost_goLeft"
+			],
+			[
+				"num",
+				"numOfColumn"
+			],
+			[
+				"curPC",
+				"curPC"
+			],
+			[
+				"nu",
+				"numOfRow"
+			],
+			[
+				"cu",
+				"currentPostionColumn"
+			],
+			[
+				"current",
+				"currentPostionRow"
+			],
+			[
+				"curr",
+				"currentPostionColumn"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/main/webapp/app/layouts/main/main.component.html",
+			"settings":
+			{
+				"buffer_size": 536,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/main/webapp/app/layouts/sidebar-nav/sidebar-nav.component.ts",
+			"settings":
+			{
+				"buffer_size": 297,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Build Back-end",
+					""
+				],
+				[
+					"Build Front-end",
+					""
+				]
+			],
+			[
+				"Build Front-end",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Build Backend",
+					""
+				],
+				[
+					"Build Front-end",
+					""
+				]
+			],
+			[
+				"Build Backend",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/C++ 7.2.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C++ 7.2.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/C++ 7.2.sublime-build",
+					"Kill"
+				],
+				[
+					"Packages/User/C++ 7.2.sublime-build",
+					"Open in Terminal"
+				]
+			],
+			[
+				"Packages/User/C++ 7.2.sublime-build",
+				"Open in Terminal"
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/C++ 7.2.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C++ 7.2.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/C++ 7.2.sublime-build",
+					"Kill"
+				],
+				[
+					"Packages/User/C++ 7.2.sublime-build",
+					"Open in Terminal"
+				],
+				[
+					"Packages/User/CPPGNU.sublime-build",
+					""
+				],
+				[
+					"Packages/User/CPPGNU.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/CPPGNU.sublime-build",
+					"Kill"
+				],
+				[
+					"Packages/User/CPPGNU.sublime-build",
+					"Open in Terminal"
+				]
+			],
+			[
+				"Packages/User/C++ 7.2.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/CPPGNU.sublime-build",
+					""
+				],
+				[
+					"Packages/User/CPPGNU.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/CPPGNU.sublime-build",
+					""
+				],
+				[
+					"Packages/User/CPPGNU.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/CPPGNU.sublime-build",
+					"Kill"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/CPPGNU.sublime-build",
+					""
+				],
+				[
+					"Packages/User/CPPGNU.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/CPPGNU.sublime-build",
+					"Kill"
+				],
+				[
+					"Packages/User/CPPGNU.sublime-build",
+					"Open Terminal"
+				]
+			],
+			[
+				"Packages/User/CPPGNU.sublime-build",
+				"Open Terminal"
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/CPPGNU.sublime-build",
+					""
+				],
+				[
+					"Packages/User/CPPGNU.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/CPPGNU.sublime-build",
+					"Kill"
+				],
+				[
+					"Packages/User/CPPGNU.sublime-build",
+					"Open in Terminal"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Java/Ant.sublime-build",
+					""
+				],
+				[
+					"Packages/Java/JavaC.sublime-build",
+					""
+				],
+				[
+					"Packages/User/JavaCv2.sublime-build",
+					""
+				],
+				[
+					"Packages/User/JavaCv2.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/User/JavaCv2.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/CPPGNU.sublime-build",
+					""
+				],
+				[
+					"Packages/User/CPPGNU.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/User/CPPGNU.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/JavaCv2.sublime-build",
+					""
+				],
+				[
+					"Packages/User/JavaCv2.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/User/JavaCv2.sublime-build",
+				"Run"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 149.0,
+		"last_filter": "remove",
+		"selected_items":
+		[
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"intall",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: List Packages"
+			],
+			[
+				"Snippet: ",
+				"Snippet: java.math."
+			]
+		],
+		"width": 428.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/ngocjr/Workspace/Project/Jhipster/ngocjr7blog",
+		"/Users/ngocjr/Workspace/Project/Jhipster/ngocjr7blog/src",
+		"/Users/ngocjr/Workspace/Project/Jhipster/ngocjr7blog/src/main",
+		"/Users/ngocjr/Workspace/Project/Jhipster/ngocjr7blog/src/main/webapp",
+		"/Users/ngocjr/Workspace/Project/Jhipster/ngocjr7blog/src/main/webapp/app",
+		"/Users/ngocjr/Workspace/Project/Jhipster/ngocjr7blog/src/main/webapp/app/layouts",
+		"/Users/ngocjr/Workspace/Project/Jhipster/ngocjr7blog/src/main/webapp/app/layouts/footer",
+		"/Users/ngocjr/Workspace/Project/Jhipster/ngocjr7blog/src/main/webapp/app/layouts/main",
+		"/Users/ngocjr/Workspace/Project/Jhipster/ngocjr7blog/src/main/webapp/app/layouts/profiles",
+		"/Users/ngocjr/Workspace/Project/Jhipster/ngocjr7blog/src/main/webapp/app/layouts/sidebar-nav"
+	],
+	"file_history":
+	[
+		"/Users/ngocjr/Workspace/Project/Jhipster/ngocjr7blog/src/main/webapp/app/layouts/main/main.component.ts",
+		"/Users/ngocjr/Workspace/Project/Jhipster/ngocjr7blog/src/main/webapp/app/layouts/main/main.component.html",
+		"/Users/ngocjr/Workspace/Project/Jhipster/ngocjr7blog/src/main/webapp/app/layouts/footer/footer.component.ts",
+		"/Users/ngocjr/Workspace/Project/Jhipster/ngocjr7blog/src/main/webapp/app/layouts/footer/footer.component.html",
+		"/Users/ngocjr/Workspace/Project/Jhipster/ngocjr7blog/ngocjr7blog.sublime-project",
+		"/Users/ngocjr/Workspace/Project/Jhipster/ngocjr7blog/src/main/webapp/index.html",
+		"/Users/ngocjr/Workspace/Project/Jhipster/ngocjr7blog/src/main/webapp/app/resume/resume.component.html",
+		"/Users/ngocjr/Library/Application Support/Sublime Text 3/Packages/User/Terminal.sublime-settings",
+		"/Users/ngocjr/Library/Application Support/Sublime Text 3/Packages/User/Terminal (OSX).sublime-settings",
+		"/Users/ngocjr/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/ngocjr/Downloads/startbootstrap-resume-master/vendor/jquery/jquery.js",
+		"/Users/ngocjr/Downloads/startbootstrap-resume-master/vendor/jquery/jquery.min.js",
+		"/Users/ngocjr/Downloads/startbootstrap-resume-master/index.html",
+		"/Users/ngocjr/Downloads/startbootstrap-resume-master/js/resume.js",
+		"/Users/ngocjr/Downloads/startbootstrap-resume-master/gulpfile.js",
+		"/Users/ngocjr/Downloads/startbootstrap-resume-master/package-lock.json",
+		"/Users/ngocjr/Downloads/startbootstrap-resume-master/package.json",
+		"/Users/ngocjr/Workspace/Project/Angular/blog/src/app/app.module.ts",
+		"/Users/ngocjr/Workspace/Project/Angular/blog/src/app/sidebar-nav/sidebar-nav.component.ts",
+		"/Users/ngocjr/Workspace/Project/Angular/blog/src/app/sidebar-nav/sidebar-nav.component.html",
+		"/Users/ngocjr/Workspace/Project/Angular/blog/src/app/app.component.html",
+		"/Users/ngocjr/Workspace/Project/Angular/blog/src/app/sidebar-nav/sidebar-nav.component.css",
+		"/Users/ngocjr/Workspace/Project/Angular/blog/.angular-cli.json",
+		"/Users/ngocjr/Workspace/Project/Angular/blog/src/app/switches/switches.component.scss",
+		"/Users/ngocjr/Workspace/Project/Angular/blog/src/app/app.component.ts",
+		"/Users/ngocjr/Workspace/Project/Angular/blog/src/app/switches/switches.component.ts",
+		"/Users/ngocjr/Workspace/Project/Angular/blog/src/app/switches/switches.component.html",
+		"/Users/ngocjr/Workspace/Project/Angular/blog/src/app/app.component.scss",
+		"/Users/ngocjr/Workspace/Project/Angular/blog/src/app/app.component.spec.ts",
+		"/Users/ngocjr/Workspace/Project/Angular/try-angular/contact-ngf/src/index.html",
+		"/Users/ngocjr/Workspace/Project/Angular/try-angular/contact-ngf/src/app/app.component.spec.ts",
+		"/Users/ngocjr/Workspace/Project/Angular/try-angular/contact-ngf/src/app/app.component.ts",
+		"/Users/ngocjr/Workspace/Project/Angular/try-angular/contact-ngf/src/main.ts",
+		"/Users/ngocjr/Workspace/Project/Angular/try-angular/contact-ngf/src/polyfills.ts",
+		"/Users/ngocjr/Workspace/Project/Angular/try-angular/contact-ngf/src/typings.d.ts",
+		"/Users/ngocjr/Workspace/Project/Angular/try-angular/contact-ngf/src/test.ts",
+		"/Users/ngocjr/Workspace/Project/Angular/try-angular/contact-app/src/index.html",
+		"/Users/ngocjr/Workspace/Project/Angular/try-angular/contact-app/src/app/app.component.html",
+		"/Users/ngocjr/Workspace/Project/Angular/BlogDemo/.angular-cli.json",
+		"/Users/ngocjr/Workspace/Project/Angular/BlogDemo/src/app/app.module.ts",
+		"/Users/ngocjr/Workspace/Project/Angular/BlogDemo/src/app/app.component.css",
+		"/Users/ngocjr/Workspace/Project/Angular/BlogDemo/src/app/change-text.directive.ts",
+		"/Users/ngocjr/Workspace/Project/Angular/BlogDemo/src/app/post/post.component.css",
+		"/Users/ngocjr/Workspace/Project/Angular/BlogDemo/src/app/app.component.html",
+		"/Users/ngocjr/Workspace/Project/Angular/BlogDemo/src/app/post/post.component.html",
+		"/Users/ngocjr/Workspace/Project/Angular/BlogDemo/src/app/app.component.ts",
+		"/Users/ngocjr/Workspace/Project/Angular/BlogDemo/src/app/post/post.component.ts",
+		"/Users/ngocjr/Workspace/Project/Angular/BlogDemo/src/app/post/post.component.spec.ts",
+		"/Users/ngocjr/Workspace/Project/Angular/BlogDemo/src/app/app.component.spec.ts",
+		"/Users/ngocjr/Workspace/Project/Angular/BlogDemo/src/main.ts",
+		"/Users/ngocjr/Workspace/Project/Angular/BlogDemo/src/polyfills.ts",
+		"/Users/ngocjr/Workspace/Project/Angular/BlogDemo/src/styles.css",
+		"/Users/ngocjr/Workspace/Project/Angular/BlogDemo/src/test.ts",
+		"/Users/ngocjr/Workspace/Project/Angular/BlogDemo/src/environments/environment.prod.ts",
+		"/Users/ngocjr/Workspace/Project/Angular/BlogDemo/src/environments/environment.ts",
+		"/Users/ngocjr/Workspace/Project/Angular/BlogDemo/package.json",
+		"/Users/ngocjr/Workspace/Sources Code/C++/C++ Code/lttu.cpp",
+		"/Users/ngocjr/Downloads/jhipster-jdl.jh",
+		"/Users/ngocjr/Workspace/Project/Chatbot - Personal/server-chatbot.js",
+		"/Users/ngocjr/Workspace/Sources Code/Python/Python Code/HelloWorld.py",
+		"/Users/ngocjr/Develop/Python/Python Sources/HelloWorld.py",
+		"/Users/ngocjr/Develop/Python/Sublime Text 3/HelloWorld.py",
+		"/Users/ngocjr/Develop/C++ Program/Sublime Text 3/XSTK.cpp",
+		"/Users/ngocjr/Develop/C++ Program/Sublime Text 3/out.txt",
+		"/Users/ngocjr/Develop/C++ Program/Sublime Text 3/CC_NOV17_CSUBQ.cpp",
+		"/Users/ngocjr/Develop/C++ Program/Sublime Text 3/test_StructAndPointer.cpp",
+		"/Users/ngocjr/Develop/Template/C++/LinkedList.cpp",
+		"/Users/ngocjr/Develop/Template/C++/SegmentTree_Structure.cpp",
+		"/Users/ngocjr/Develop/Template/C++/AVLTree.cpp",
+		"/Users/ngocjr/Develop/Template/C++/in.txt",
+		"/Users/ngocjr/Library/Application Support/Sublime Text 3/Packages/User/C++ 7.2.sublime-build",
+		"/Users/ngocjr/Develop/C++ Program/BaiNopCTDL/in.txt",
+		"/Users/ngocjr/Develop/C++ Program/BaiNopCTDL/bai4.cpp",
+		"/Users/ngocjr/Develop/C++ Program/BaiNopCTDL/bai5_1.cpp",
+		"/Users/ngocjr/Develop/C++ Program/BaiNopCTDL/Bai5_2.cpp",
+		"/Users/ngocjr/Develop/C++ Program/BaiNopCTDL/Bai5_3.cpp",
+		"/Users/ngocjr/Develop/C++ Program/BaiNopCTDL/Bai5.cpp",
+		"/Users/ngocjr/Develop/C++ Program/BaiNopCTDL/bai6.cpp",
+		"/Users/ngocjr/Develop/C++ Program/BaiNopCTDL/bai7.cpp",
+		"/Users/ngocjr/Develop/C++ Program/BaiNopCTDL/bai8.cpp",
+		"/Users/ngocjr/Develop/C++ Program/BaiNopCTDL/bai9.cpp",
+		"/Users/ngocjr/Develop/C++ Program/BaiNopCTDL/bai11.cpp",
+		"/Users/ngocjr/Develop/C++ Program/BaiNopCTDL/bai12.cpp",
+		"/Users/ngocjr/Develop/C++ Program/BaiNopCTDL/bai13.cpp",
+		"/Users/ngocjr/Develop/C++ Program/BaiNopCTDL/bai14.cpp",
+		"/Users/ngocjr/Develop/C++ Program/BaiNopCTDL/sinhtest.cpp",
+		"/Users/ngocjr/Develop/C++ Program/BaiNopCTDL/Bai15.cpp",
+		"/Users/ngocjr/Develop/C++ Program/BaiNopCTDL/bai3.cpp",
+		"/Users/ngocjr/Develop/C++ Program/BaiNopCTDL/bai2_pointer.cpp",
+		"/Users/ngocjr/Develop/C++ Program/BaiNopCTDL/bai1_Pointer.cpp",
+		"/Users/ngocjr/Develop/C++ Program/Sublime Text 3/30052017_ESP_Bai1.cpp",
+		"/Users/ngocjr/Library/Application Support/Sublime Text 3/Packages/User/CPPGNU.sublime-build",
+		"/Users/ngocjr/Develop/C++ Program/Sublime Text 3/ACM2016_A.cpp",
+		"/Users/ngocjr/Develop/C++ Program/Sublime Text 3/MakeTest.cpp",
+		"/Users/ngocjr/Develop/C++ Program/BaiNopCTDL/bai1.cpp",
+		"/Users/ngocjr/Develop/C++ Program/Sublime Text 3/in.txt",
+		"/Users/ngocjr/Develop/C++ Program/Sublime Text 3/CF897_D.cpp",
+		"/Users/ngocjr/Develop/C++ Program/Sublime Text 3/CF897_C.cpp",
+		"/Users/ngocjr/Develop/C++ Program/Sublime Text 3/CF897_B.cpp",
+		"/Users/ngocjr/Develop/C++ Program/Sublime Text 3/CF897_A.cpp",
+		"/Users/ngocjr/Downloads/simple-blog-master/index.html",
+		"/Users/ngocjr/Downloads/New folder/1.html",
+		"/Users/ngocjr/Downloads/New folder/1.js",
+		"/Users/ngocjr/Downloads/blog-template-master/styles/styles.css",
+		"/Users/ngocjr/Develop/C++ Program/Sublime Text 3/HUGEKNAP.cpp",
+		"/Users/ngocjr/Develop/C++ Program/Sublime Text 3/ACM2017Northern_C.cpp",
+		"/Users/ngocjr/Develop/C++ Program/Sublime Text 3/CF889_D.cpp",
+		"/Users/ngocjr/Develop/C++ Program/Sublime Text 3/main.cpp",
+		"/Users/ngocjr/Develop/C++ Program/Sublime Text 3/main",
+		"/Users/ngocjr/Develop/C++ Program/Sublime Text 3/CF889_C.cpp",
+		"/Users/ngocjr/Develop/C++ Program/Sublime Text 3/CF889_B.cpp",
+		"/Users/ngocjr/Develop/C++ Program/Sublime Text 3/CF889_A.cpp",
+		"/Users/ngocjr/Develop/Template/C++/Bitwise.cpp",
+		"/Users/ngocjr/Develop/C++ Program/Sublime Text 3/CF380_C.cpp",
+		"/Users/ngocjr/Develop/C++ Program/Sublime Text 3/CC_NOV17_LVGFT.cpp",
+		"/Users/ngocjr/Develop/Template/C++/MakeTest.cpp",
+		"/Users/ngocjr/Develop/Template/C++/SegmentTree.cpp",
+		"/Users/ngocjr/Develop/C++ Program/Sublime Text 3/CC_NOV17_CHEFHPAL.cpp",
+		"/Users/ngocjr/Develop/C++ Program/Sublime Text 3/CC_NOV17_PERPALIN.cpp",
+		"/Users/ngocjr/Develop/C++ Program/Sublime Text 3/CC_NOV17_CLRL.cpp",
+		"/Users/ngocjr/Develop/C++ Program/Sublime Text 3/CC_NOV17_VILTRIBE.cpp",
+		"/Users/ngocjr/Library/Application Support/Sublime Text 3/Packages/User/partialcomment.sublime-snippet",
+		"/Users/ngocjr/Library/Application Support/Sublime Text 3/Packages/User/cpp_template.sublime-snippet",
+		"/Users/ngocjr/Library/Application Support/Sublime Text 3/Packages/User/timestamp.py",
+		"/Users/ngocjr/Library/Application Support/Sublime Text 3/Packages/User/Default.tmPreferences",
+		"/Users/ngocjr/Library/Application Support/Sublime Text 3/Packages/User/timer.sublime-snippet",
+		"/Users/ngocjr/Library/Application Support/Sublime Text 3/Packages/User/Default.sublime-options",
+		"/Users/ngocjr/Library/Application Support/Sublime Text 3/Packages/User/add-time.py"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/main/webapp/app/layouts/main/main.component.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 536,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								75,
+								75
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/main/webapp/app/layouts/sidebar-nav/sidebar-nav.component.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 297,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								247,
+								247
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 38.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 202.0
+	},
+	"output.find_results":
+	{
+		"height": 100.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 100.0
+	},
+	"pinned_build_system": "",
+	"project": "ngocjr7blog.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Develop/Java/RootApplet.java"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 67.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"main"
+			]
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 280.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

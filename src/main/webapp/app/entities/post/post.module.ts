@@ -12,6 +12,7 @@ import {
     PostDeletePopupComponent,
     PostDeleteDialogComponent,
     PostDirectionService,
+    PostPreviewComponent,
     postRoute,
     postPopupRoute,
 } from './';
@@ -32,6 +33,10 @@ const ENTITY_STATES = [
         RouterModule.forChild(ENTITY_STATES),
         RouterModule.forRoot(ENTITY_STATES, { useHash: true }),
     ],
+    exports: [
+        PostPreviewComponent,
+        PostComponent
+    ],
     declarations: [
         PostComponent,
         PostDetailComponent,
@@ -39,7 +44,8 @@ const ENTITY_STATES = [
         PostDeleteDialogComponent,
         PostDirectionComponent,
         PostDeletePopupComponent,
-        CkeditorComponent
+        CkeditorComponent,
+        PostPreviewComponent
     ],
     entryComponents: [
         PostComponent,

@@ -35,6 +35,10 @@ td, th {
     background-color:#ccc;
 }
 
+.item_title:hover {
+    background-coler: #000000;
+}
+
 .left .fa {
     margin:20px;
     width:25px;
@@ -101,3 +105,14 @@ input[type=search]:focus {
     color: #aaa !important;
     font-size: 12px;
 }
+
+.logo-img {
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url("../../../content/images/njr-logo-fixed.png") no-repeat center center;
+    background-size: contain;
+}
+
+

@@ -12,7 +12,6 @@ import { Ngocjr7BlogAccountModule } from './account/account.module';
 import { Ngocjr7BlogEntityModule } from './entities/entity.module';
 import { customHttpProvider } from './blocks/interceptor/http.provider';
 import { PaginationConfig } from './blocks/config/uib-pagination.config';
-
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 
 import {
@@ -25,6 +24,7 @@ import {
     ErrorComponent, SidebarWidgetsColComponent
 } from './layouts';
 import { SidebarNavComponent } from './layouts/sidebar-nav/sidebar-nav.component';
+import {ResumeComponent} from './resume/resume.component';
 
 @NgModule({
     imports: [
@@ -46,7 +46,8 @@ import { SidebarNavComponent } from './layouts/sidebar-nav/sidebar-nav.component
         ActiveMenuDirective,
         FooterComponent,
         SidebarNavComponent,
-        SidebarWidgetsColComponent
+        SidebarWidgetsColComponent,
+        ResumeComponent
     ],
     providers: [
         ProfileService,

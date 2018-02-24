@@ -19,7 +19,6 @@ export class CommentComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit() {
-
     }
 
     ngOnDestroy() {

@@ -14,6 +14,7 @@ import {
     categoryRoute,
     categoryPopupRoute,
 } from './';
+import {Ngocjr7BlogPostModule} from '../post/post.module';
 
 const ENTITY_STATES = [
     ...categoryRoute,
@@ -23,6 +24,7 @@ const ENTITY_STATES = [
 @NgModule({
     imports: [
         Ngocjr7BlogSharedModule,
+        Ngocjr7BlogPostModule,
         RouterModule.forChild(ENTITY_STATES)
     ],
     declarations: [

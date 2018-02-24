@@ -1,8 +1,27 @@
 
 <div *ngIf="post">
-    <h2>{{post.title}}</h2>
+    <h2 style="font-weight: bold;">
+        <span>{{post.title}}</span>
+        <div class="btn-group mb-2 mt-1">
+            <button type="submit"
+                    [routerLink]="['/post/'+post.id+'/edit']"
+                    class="button button-no-border"
+                    *jhiHasAnyAuthority="'ROLE_ADMIN'">
+                <span class="fa fa-pencil"></span>
+                <span class="hidden-md-down" ></span>
+            </button>
+            <button type="submit"
+                    [routerLink]="['/', { outlets: { popup: 'post/'+ post.id + '/delete'} }]"
+                    replaceUrl="true"
+                    class="button button-no-border"
+                    *jhiHasAnyAuthority="'ROLE_ADMIN'">
+                <span class="fa fa-remove"></span>
+                <span class="hidden-md-down" ></span>
+            </button>
+        </div>
+    </h2>
     <dd>
-        <span>Post on {{post.date | date:'mediumDate'}} by ngocjr7</span>
+        <span style="font-style: italic;">Post on {{post.date | date:'mediumDate'}} by ngocjr7</span>
     </dd>
     <hr>
     <jhi-alert-error></jhi-alert-error>
@@ -14,12 +33,12 @@
         <table>
             <tr>
                 <td>
-                    <dt><span jhiTranslate="ngocjr7BlogApp.post.category">Category</span></dt>
+                    <dt><span>Category: </span></dt>
                 </td>
                 <td>
                     <dd>
                         <div *ngIf="post.category">
-                            <a [routerLink]="['/category', post.category?.id]">{{post.category?.name}}</a>
+                            <span [routerLink]="['/category', post.category?.id]">{{post.category?.name}}</span>
                         </div>
                     </dd>
                 </td>

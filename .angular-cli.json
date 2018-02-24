@@ -9,7 +9,7 @@
         "assets": [
             "content",
             "i18n",
-            "favicon.ico"
+            "njr_EDe_2.icon"
         ],
         "index": "index.html",
         "main": "app/app.main.ts",
@@ -24,7 +24,15 @@
             "../node_modules/bootstrap/scss/bootstrap.scss",
             "../node_modules/font-awesome/scss/font-awesome.scss"
         ],
-        "scripts": []
+        "scripts": [
+            "app/resume/vendor/jquery/jquery.min.js",
+            "app/resume/vendor/bootstrap/js/bootstrap.bundle.min.js",
+            "app/resume/vendor/jquery-easing/jquery.easing.min.js",
+            "app/resume/js/resume.js",
+            "../node_modules/jquery/dist/jquery.js",
+            "../node_modules/tether/dist/js/tether.js",
+            "../node_modules/bootstrap/dist/js/bootstrap.js"
+        ]
     }],
     "lint": [{
             "project": "../../../tsconfig.json"

@@ -46,3 +46,8 @@
     color: black;
     border: 2px solid #ffffff;
 }
+
+img {
+    display: block;
+    margin: 0 auto;
+}

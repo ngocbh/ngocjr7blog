@@ -11,7 +11,7 @@ import { JhiLanguageHelper } from '../../shared';
     ]
 })
 export class JhiMainComponent implements OnInit {
-
+    choice: String = '';
     constructor(
         private jhiLanguageHelper: JhiLanguageHelper,
         private router: Router
@@ -31,5 +31,9 @@ export class JhiMainComponent implements OnInit {
                 this.jhiLanguageHelper.updateTitle(this.getPageTitle(this.router.routerState.snapshot.root));
             }
         });
+    }
+
+    setChoice(event) {
+        this.choice = event;
     }
 }

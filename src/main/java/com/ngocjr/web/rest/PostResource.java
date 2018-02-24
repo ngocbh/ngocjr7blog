@@ -110,7 +110,7 @@ public class PostResource {
     @GetMapping("/posts/category/{id}")
     @Timed
     public ResponseEntity<List<Post>> getAllPostsByCategoryId(Pageable pageable,@PathVariable Long id) {
-        log.debug("REST request to get a page of Posts in Category 'id'");
+        log.debug("REST request to get a page of Posts in Category 'id'" , id);
         List<Post> posts = postRepository.findAllPostsByCategoryId(id);
         int start = pageable.getOffset();
         int end = (start + pageable.getPageSize()) > posts.size() ? posts.size() : (start + pageable.getPageSize());

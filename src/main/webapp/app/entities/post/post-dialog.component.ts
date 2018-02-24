@@ -114,7 +114,8 @@ export class PostDirectionComponent implements OnInit, OnDestroy {
         private route: ActivatedRoute,
         private postDirectionService: PostDirectionService,
         private resolver: ComponentFactoryResolver,
-        private container: ViewContainerRef
+        private container: ViewContainerRef,
+        private categoryService: CategoryService
     ) {}
 
     ngOnInit() {
@@ -128,13 +129,26 @@ export class PostDirectionComponent implements OnInit, OnDestroy {
                         this.componentRef.instance.post = post;
                 });
             } else {
-                this.postDirectionService
-                    .open(PostDialogComponent as Component).then((post) => {
+                if ( params['categoryId'] ) {
+                    this.categoryService.find(params['categoryId']).subscribe( (category) => {
+                        this.postDirectionService
+                            .open(PostDialogComponent as Component).then((post) => {
+                            this.container.clear();
+                            const factory: ComponentFactory<any> = this.resolver.resolveComponentFactory(PostDialogComponent);
+                            this.componentRef = this.container.createComponent(factory);
+                            post.category = category;
+                            this.componentRef.instance.post = post; // Must set post in PostDialogComponent is Input Data Binding
+                        });
+                    });
+                } else {
+                    this.postDirectionService
+                        .open(PostDialogComponent as Component).then((post) => {
                         this.container.clear();
                         const factory: ComponentFactory<any> = this.resolver.resolveComponentFactory(PostDialogComponent);
                         this.componentRef = this.container.createComponent(factory);
                         this.componentRef.instance.post = post; // Must set post in PostDialogComponent is Input Data Binding
-                });
+                    });
+                }
             }
         });
     }
