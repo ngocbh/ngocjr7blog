@@ -1,4 +1,17 @@
 # ngocjr7blog
+
+## Uncomplete
+
+This project is uncomplete. I have some problems so i can't continue. I hope someday I can do it again. Issues not yet completed :
+    1. Search Engine. I need to add search engine for website. It should work within post, categories and tag
+    2. Tag. Add tag when create post. create new tag if tag does not exist ( it should create tag by # or tab keyword )
+    3. Fix Message me user interface and auto send to my email
+    4. Fix register problem. It can't auto send verify email
+    5. Deploy this project to heroku ( or Something like it )
+    6. Learn about component interactive in Angular and Typescript. How can a component can access to variable of another component. ( In ResumeComponent, I use static variable . But it doesn't good idea for general problem )
+    
+    
+## JHipster Tag
 This application was generated using JHipster 4.13.3, you can find documentation and help at [http://www.jhipster.tech/documentation-archive/v4.13.3](http://www.jhipster.tech/documentation-archive/v4.13.3).
 
 ## Development
