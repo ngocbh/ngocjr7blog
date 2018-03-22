@@ -1,20 +1,31 @@
-<div class="left">
+<div id='my-sidebar' class="left" >
     <div class="item " routerLink=''>
         <div class="_title">
             <span class="logo-img"></span>
             <span style="margin-left: 17px; font-size: 16px;">Hello! I'm ngocjr7</span>
         </div>
     </div>
-    <div class="item active">
-        <i class="fa fa-comments"></i>
-        Message Me</div>
-    <div class="item" [routerLink]="['/category']">
+    <div class="item" id='messageItem'>
+        <div *ngIf="!isVisible; else elseBlock" (click)="onClickMessage()">
+            <i class="fa fa-comments"></i>
+            Message Me
+        </div>
+        <ng-template #elseBlock>
+            <p> Your name:</p>
+            <input id="name"></input>
+            <p>Your message:</p>
+            <textarea></textarea>
+            <button (click)="cancel()">Cancel</button>
+            <button (click)="send()">Send</button>
+        </ng-template>
+    </div>
+    <div class="item" [routerLink]="['/category']" (click)="cancel()">
         <i class="fa fa-th-list"></i>
         Categories</div>
     <div class="item">
         <i class="fa fa-american-sign-language-interpreting"></i>
         Reference</div>
-    <div class="item" (click)='onClick()' routerLink="resume" >
+    <div class="item" (click)='onClick()' routerLink="resume" (click)="cancel()">
         <i class="fa fa-male"></i>
         About Me</div>
     <!--<div class="item">-->

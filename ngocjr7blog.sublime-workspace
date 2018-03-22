@@ -220,19 +220,10 @@
 	"buffers":
 	[
 		{
-			"file": "src/main/webapp/app/layouts/main/main.component.html",
+			"file": "src/main/webapp/app/layouts/footer/footer.component.ts",
 			"settings":
 			{
-				"buffer_size": 536,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/main/webapp/app/layouts/sidebar-nav/sidebar-nav.component.ts",
-			"settings":
-			{
-				"buffer_size": 297,
-				"encoding": "UTF-8",
+				"buffer_size": 208,
 				"line_ending": "Unix"
 			}
 		}
@@ -618,10 +609,11 @@
 	],
 	"file_history":
 	[
-		"/Users/ngocjr/Workspace/Project/Jhipster/ngocjr7blog/src/main/webapp/app/layouts/main/main.component.ts",
-		"/Users/ngocjr/Workspace/Project/Jhipster/ngocjr7blog/src/main/webapp/app/layouts/main/main.component.html",
-		"/Users/ngocjr/Workspace/Project/Jhipster/ngocjr7blog/src/main/webapp/app/layouts/footer/footer.component.ts",
 		"/Users/ngocjr/Workspace/Project/Jhipster/ngocjr7blog/src/main/webapp/app/layouts/footer/footer.component.html",
+		"/Users/ngocjr/Workspace/Project/Jhipster/ngocjr7blog/src/main/webapp/app/layouts/main/main.component.html",
+		"/Users/ngocjr/Workspace/Project/Jhipster/ngocjr7blog/src/main/webapp/app/layouts/sidebar-nav/sidebar-nav.component.ts",
+		"/Users/ngocjr/Workspace/Project/Jhipster/ngocjr7blog/src/main/webapp/app/layouts/main/main.component.ts",
+		"/Users/ngocjr/Workspace/Project/Jhipster/ngocjr7blog/src/main/webapp/app/layouts/footer/footer.component.ts",
 		"/Users/ngocjr/Workspace/Project/Jhipster/ngocjr7blog/ngocjr7blog.sublime-project",
 		"/Users/ngocjr/Workspace/Project/Jhipster/ngocjr7blog/src/main/webapp/index.html",
 		"/Users/ngocjr/Workspace/Project/Jhipster/ngocjr7blog/src/main/webapp/app/resume/resume.component.html",
@@ -744,8 +736,7 @@
 		"/Users/ngocjr/Library/Application Support/Sublime Text 3/Packages/User/timestamp.py",
 		"/Users/ngocjr/Library/Application Support/Sublime Text 3/Packages/User/Default.tmPreferences",
 		"/Users/ngocjr/Library/Application Support/Sublime Text 3/Packages/User/timer.sublime-snippet",
-		"/Users/ngocjr/Library/Application Support/Sublime Text 3/Packages/User/Default.sublime-options",
-		"/Users/ngocjr/Library/Application Support/Sublime Text 3/Packages/User/add-time.py"
+		"/Users/ngocjr/Library/Application Support/Sublime Text 3/Packages/User/Default.sublime-options"
 	],
 	"find":
 	{
@@ -780,54 +771,24 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/main/webapp/app/layouts/main/main.component.html",
+					"file": "src/main/webapp/app/layouts/footer/footer.component.ts",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 536,
+						"buffer_size": 208,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								75,
-								75
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/main/webapp/app/layouts/sidebar-nav/sidebar-nav.component.ts",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 297,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								247,
-								247
+								175,
+								175
 							]
 						],
 						"settings":
